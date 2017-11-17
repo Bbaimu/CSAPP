@@ -1,0 +1,2687 @@
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'meu_m2wL2CZ/m2w:0.202740/17Cy/MileStone/L2_Stable_240B_CV/2:user'
+System Time:Wed Apr 19 14:07:49 2017
+CPU Timestamp:2632566231200
+Revision: '0'
+Mem: 2041400 total 0 shared 10472 buffer 597380 free
+loadavg: 4.17 4.85 4.47
+pid: 130, tid: 255, name: NHCanBus_DataCh  >>> /sbin/trafficd <<<
+signal 11 (SIGSEGV), code 2 (SEGV_ACCERR), fault addr b3d85000
+    r0 00009f7a  r1 00000000  r2 00000000  r3 00000000
+    r4 b3d7110a  r5 00000000  r6 b3d84ffe  r7 b501c00c
+    r8 00009f7a  r9 00000002  sl 0000d0b3  fp b501c044
+    ip b6f21d08  sp b33aad00  lr b500f581  pc b500f716  cpsr 800f0030
+
+backtrace:
+    #00  pc 00007716  /lib/libnhcanbushandler.so
+    #01  pc 000090a9  /lib/libnhcanbushandler.so
+    #02  pc 00008fbb  /lib/libnhcanbushandler.so
+    #03  pc 000066ef  /lib/libnhcanbushandler.so
+    #04  pc 00025ab7  /lib/libnceventsys.so
+    #05  pc 0002986d  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+88)
+    #06  pc 00019dfb  /lib/libncore.so
+    #07  pc 00019395  /lib/libncore.so
+    #08  pc 00007228  /lib/libpthread.so.0
+    #09  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b33aacc0  00051318  [heap]
+         b33aacc4  00000000  
+         b33aacc8  b6f22088  /lib/libncore.so
+         b33aaccc  57554100  
+         b33aacd0  b501c044  /lib/libnhcanbushandler.so
+         b33aacd4  00000000  
+         b33aacd8  b3d84ffe  
+         b33aacdc  b501c00c  /lib/libnhcanbushandler.so
+         b33aace0  00009f79  /sbin/trafficd
+         b33aace4  b500f581  /lib/libnhcanbushandler.so
+         b33aace8  b5011b1d  /lib/libnhcanbushandler.so
+         b33aacec  b5011ba2  /lib/libnhcanbushandler.so
+         b33aacf0  00000000  
+         b33aacf4  b3d7110a  
+         b33aacf8  00000000  
+         b33aacfc  b500f745  /lib/libnhcanbushandler.so
+    #00  b33aad00  b501c00c  /lib/libnhcanbushandler.so
+         b33aad04  00000000  
+         b33aad08  00000000  
+         b33aad0c  00000000  
+         b33aad10  000525c8  [heap]
+         b33aad14  b3d71108  
+         b33aad18  00000002  
+         b33aad1c  b33aad34  [stack:255]
+         b33aad20  b501be4c  /lib/libnhcanbushandler.so
+         b33aad24  00069098  [heap]
+         b33aad28  00000000  
+         b33aad2c  b50110ad  /lib/libnhcanbushandler.so
+    #01  b33aad30  b3d5be2c  
+         b33aad34  b6f20eb0  /lib/libncore.so
+         b33aad38  b3ecca38  
+         b33aad3c  b3d572d8  
+         b33aad40  00000000  
+         b33aad44  000525c8  [heap]
+         b33aad48  b33aad7c  [stack:255]
+         b33aad4c  0005260c  [heap]
+         b33aad50  00000002  
+         b33aad54  00000000  
+         b33aad58  b3d7b4e0  
+         b33aad5c  b5010fbd  /lib/libnhcanbushandler.so
+    #02  b33aad60  b33aaf8c  [stack:255]
+         b33aad64  b6aec5b3  /lib/libutils.so (android::SharedBuffer::dealloc(android::SharedBuffer const*)+10)
+         b33aad68  000527a4  [heap]
+         b33aad6c  b33aad7c  [stack:255]
+         b33aad70  b33aad80  [stack:255]
+         b33aad74  b5011395  /lib/libnhcanbushandler.so
+         b33aad78  b3ecc840  
+         b33aad7c  b6f20eb0  /lib/libncore.so
+         b33aad80  b3ecca38  
+         b33aad84  b3d572d8  
+         b33aad88  b3ecc840  
+         b33aad8c  b3ecc82c  
+         b33aad90  b5010e9d  /lib/libnhcanbushandler.so
+         b33aad94  000525c8  [heap]
+         b33aad98  00069098  [heap]
+         b33aad9c  b5011395  /lib/libnhcanbushandler.so
+         ........  ........
+    #03  b33aadb0  b3ecc820  
+         b33aadb4  b3ecc84c  
+         b33aadb8  00000000  
+         b33aadbc  00000040  
+         b33aadc0  00000002  
+         b33aadc4  000f4240  
+         b33aadc8  b3bbb910  [stack:226]
+         b33aadcc  00069078  [heap]
+         b33aadd0  b33aadec  [stack:255]
+         b33aadd4  ffffffff  
+         b33aadd8  00000000  
+         b33aaddc  b3bbb910  [stack:226]
+         b33aade0  b6f51058  /lib/ld-linux-armhf.so.3
+         b33aade4  b6956ab9  /lib/libnceventsys.so
+    #04  b33aade8  00069078  [heap]
+         b33aadec  b3e04920  
+         b33aadf0  b6956a67  /lib/libnceventsys.so
+         b33aadf4  000525c8  [heap]
+         b33aadf8  b33aae04  [stack:255]
+         b33aadfc  b695a86f  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+90)
+    #05  b33aae00  000525c8  [heap]
+         b33aae04  00069078  [heap]
+         b33aae08  00000001  
+         b33aae0c  00052670  [heap]
+         b33aae10  00052676  [heap]
+         b33aae14  000000ff  
+         b33aae18  00000001  
+         b33aae1c  b6f05dfd  /lib/libncore.so
+    #06  b33aae20  00000001  
+         b33aae24  00000898  
+         b33aae28  b6f05da5  /lib/libncore.so
+         b33aae2c  00000000  
+         b33aae30  00000000  
+         b33aae34  000526dc  [heap]
+         b33aae38  00000152  
+         b33aae3c  b6f05397  /lib/libncore.so
+    #07  b33aae40  b6f0538d  /lib/libncore.so
+         b33aae44  b6c5e22c  /lib/libpthread.so.0
+    #08  b33aae48  b33ab668  [stack:255]
+         b33aae4c  b33ab450  [stack:255]
+         b33aae50  00000000  
+         b33aae54  00000000  
+         b33aae58  b33ab4b8  [stack:255]
+         b33aae5c  00000000  
+         b33aae60  000526dc  [heap]
+         b33aae64  00000152  
+         b33aae68  b3bbb910  [stack:226]
+         b33aae6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b33aae70  b33ab450  [stack:255]
+         b33aae74  b33aaf8c  [stack:255]
+         b33aae78  42b37c06  
+         b33aae7c  474c33b2  
+         b33aae80  00000000  
+         b33aae84  00000000  
+         ........  ........
+    #09  b33aaf90  00000000  
+         b33aaf94  00000000  
+         b33aaf98  00000000  
+         b33aaf9c  00000000  
+         b33aafa0  00000000  
+         b33aafa4  00000000  
+         b33aafa8  00000000  
+         b33aafac  00000000  
+         b33aafb0  00000000  
+         b33aafb4  00000000  
+         b33aafb8  00000000  
+         b33aafbc  00000000  
+         b33aafc0  00000000  
+         b33aafc4  00000000  
+         b33aafc8  00000000  
+         b33aafcc  00000000  
+
+memory near r0:
+    00009f58 00000000 00000000 00000000 00000000  
+    00009f68 00011e40 00000000 00000000 00008e08  
+    00009f78 00008e08 00008e08 00008e08 00008e08  
+    00009f88 00008e08 00008e08 00008e08 00008e08  
+    00009f98 00008e08 00008e08 00008e08 00008e08  
+    00009fa8 00008e08 00008e08 00008e08 00008e08  
+    00009fb8 00008e08 00008e08 00008e08 00008e08  
+    00009fc8 00008e08 00008e08 00008e08 00008e08  
+    00009fd8 00008e08 00008e08 00008e08 00008e08  
+    00009fe8 00008e08 00000000 00011dc8 00011b88  
+    00009ff8 00011e00 00000000 ffffffff ffffffff  
+    0000a008 ffffffff ffffffff ffffffff ffffffff  
+    0000a018 ffffffff ffffffff ffffffff ffffffff  
+    0000a028 ffffffff ffffffff ffffffff ffffffff  
+    0000a038 ffffffff ffffffff ffffffff ffffffff  
+    0000a048 ffffffff ffffffff ffffffff ffffffff  
+
+memory near r4:
+    b3d710e8 b3d58d90 b3d710d8 00006d63 00000015  
+    b3d710f8 b3d71118 b3d58da0 00004c69 00000015  
+    b3d71108 b3d00000 b3d4e8b8 00000010 0000001d  
+    b3d71118 b3d5bdc8 b3d710f8 00007ff8 00000000  
+    b3d71128 00000018 00000015 b3d71140 b3d70fe0  
+    b3d71138 0000d828 00000015 b3d71150 b3d71130  
+    b3d71148 0000f828 00000015 b3d71160 b3d71140  
+    b3d71158 00000829 00000015 b3d71170 b3d71150  
+    b3d71168 00002829 00000015 b3d71180 b3d71160  
+    b3d71178 0000b900 00000015 b3d71190 b3d71170  
+    b3d71188 00003829 00000015 b3d711a0 b3d71180  
+    b3d71198 00004829 00000015 b3d711b0 b3d71190  
+    b3d711a8 0000b910 00000015 b3d711c0 b3d711a0  
+    b3d711b8 00005829 00000015 b3d711d0 b3d711b0  
+    b3d711c8 0000b920 00000015 b3d711e0 b3d711c0  
+    b3d711d8 00006829 00000015 b3d711f0 b3d711d0  
+
+memory near r6:
+    b3d84fdc 00000000 00000000 00000000 00000000  
+    b3d84fec 00000000 00000000 00000000 00000000  
+    b3d84ffc 00000000 00000000 00000000 00000000  
+    b3d8500c 00000000 00000000 00000000 00000000  
+    b3d8501c 00000000 00000000 00000000 00000000  
+    b3d8502c 00000000 00000000 00000000 00000000  
+    b3d8503c 00000000 00000000 00000000 00000000  
+    b3d8504c 00000000 00000000 00000000 00000000  
+    b3d8505c 00000000 00000000 00000000 00000000  
+    b3d8506c 00000000 00000000 00000000 00000000  
+    b3d8507c 00000000 00000000 00000000 00000000  
+    b3d8508c 00000000 00000000 00000000 00000000  
+    b3d8509c 00000000 00000000 00000000 00000000  
+    b3d850ac 00000000 00000000 00000000 00000000  
+    b3d850bc 00000000 00000000 00000000 00000000  
+    b3d850cc 00000000 00000000 00000000 00000000  
+
+memory near r7:
+    b501bfec b501bb90 00000000 00000000 00000000  
+    b501bffc b6cb93a0 b501c000 00000000 0004ac78  
+    b501c00c b501b720 0004aa70 be8538a4 b501b790  
+    b501c01c 0004c990 00000000 b6f20e50 00000000  
+    b501c02c 00000000 00000000 00000001 00000000  
+    b501c03c 00000000 00000001 b3d28728 b3d82770  
+    b501c04c b3d27598 b3d280c8 b3d006a0 b3d27580  
+    b501c05c b3d2be50 b3d2be50 67616964 00000000  
+    b501c06c 00000000 00000000 00000000 00000001  
+    b501c07c b3e32400 b32cc70d b32cc73b b32cc759  
+    b501c08c b3e1c0e8 b501ba28 00000000 00000000  
+    b501c09c 00000000 b501c098 b501c098 00000000  
+    b501c0ac 00000001 b501c00c 006e6f69 756e672e  
+    b501c0bc 7265762e 6e6f6973 2e00725f 2e6c6572  
+    b501c0cc 006e7964 6c65722e 746c702e 6e692e00  
+    b501c0dc 2e007469 74786574 69662e00 2e00696e  
+
+memory near r8:
+    00009f58 00000000 00000000 00000000 00000000  
+    00009f68 00011e40 00000000 00000000 00008e08  
+    00009f78 00008e08 00008e08 00008e08 00008e08  
+    00009f88 00008e08 00008e08 00008e08 00008e08  
+    00009f98 00008e08 00008e08 00008e08 00008e08  
+    00009fa8 00008e08 00008e08 00008e08 00008e08  
+    00009fb8 00008e08 00008e08 00008e08 00008e08  
+    00009fc8 00008e08 00008e08 00008e08 00008e08  
+    00009fd8 00008e08 00008e08 00008e08 00008e08  
+    00009fe8 00008e08 00000000 00011dc8 00011b88  
+    00009ff8 00011e00 00000000 ffffffff ffffffff  
+    0000a008 ffffffff ffffffff ffffffff ffffffff  
+    0000a018 ffffffff ffffffff ffffffff ffffffff  
+    0000a028 ffffffff ffffffff ffffffff ffffffff  
+    0000a038 ffffffff ffffffff ffffffff ffffffff  
+    0000a048 ffffffff ffffffff ffffffff ffffffff  
+
+memory near sl:
+    0000d090 ffffffff ffffffff ffffffff ffffffff  
+    0000d0a0 ffffffff ffffffff ffffffff ffffffff  
+    0000d0b0 ffffffff ffffffff ffffffff ffffffff  
+    0000d0c0 ffffffff ffffffff ffffffff ffffffff  
+    0000d0d0 ffffffff ffffffff ffffffff ffffffff  
+    0000d0e0 ffffffff ffffffff ffffffff ffffffff  
+    0000d0f0 ffffffff ffffffff ffffffff ffffffff  
+    0000d100 ffffffff ffffffff ffffffff ffffffff  
+    0000d110 ffffffff ffffffff ffffffff ffffffff  
+    0000d120 ffffffff ffffffff ffffffff ffffffff  
+    0000d130 ffffffff ffffffff ffffffff ffffffff  
+    0000d140 ffffffff ffffffff ffffffff ffffffff  
+    0000d150 ffffffff ffffffff ffffffff ffffffff  
+    0000d160 ffffffff ffffffff ffffffff ffffffff  
+    0000d170 ffffffff ffffffff ffffffff ffffffff  
+    0000d180 ffffffff ffffffff ffffffff ffffffff  
+
+memory near fp:
+    b501c024 b6f20e50 00000000 00000000 00000000  
+    b501c034 00000001 00000000 00000000 00000001  
+    b501c044 b3d28728 b3d82770 b3d27598 b3d280c8  
+    b501c054 b3d006a0 b3d27580 b3d2be50 b3d2be50  
+    b501c064 67616964 00000000 00000000 00000000  
+    b501c074 00000000 00000001 b3e32400 b32cc70d  
+    b501c084 b32cc73b b32cc759 b3e1c0e8 b501ba28  
+    b501c094 00000000 00000000 00000000 b501c098  
+    b501c0a4 b501c098 00000000 00000001 b501c00c  
+    b501c0b4 006e6f69 756e672e 7265762e 6e6f6973  
+    b501c0c4 2e00725f 2e6c6572 006e7964 6c65722e  
+    b501c0d4 746c702e 6e692e00 2e007469 74786574  
+    b501c0e4 69662e00 2e00696e 61646f72 2e006174  
+    b501c0f4 2e4d5241 61747865 412e0062 652e4d52  
+    b501c104 78646978 68652e00 6172665f 2e00656d  
+    b501c114 74696e69 7272615f 2e007961 696e6966  
+
+memory near ip:
+    b6f21ce8 b6d4ae00 b6d4aa70 b6d4aa50 b6d6a4d0  
+    b6f21cf8 b6e9d2a8 b6ce6e88 b6c64184 b6cea710  
+    b6f21d08 b6c629bc b6c62338 b6d6d24c b6e9d488  
+    b6f21d18 b6d5dbb0 b6e9e4c8 b6aec2e1 b6d4b610  
+    b6f21d28 b6b883a9 b6dd8e28 b6aec3fd b6e73ec4  
+    b6f21d38 b6e5d674 b6e5d510 b6d4ac50 b6d6afdc  
+    b6f21d48 b6c63bbc b6f24741 b6e37ab0 b6c64070  
+    b6f21d58 b6e72598 b6d69d24 b6abdab5 b6d551d0  
+    b6f21d68 b6bf1f55 b6c6448c b6d26274 b6d4d6f0  
+    b6f21d78 b6e744d4 b6dd7600 b6d6a30c b6c601dc  
+    b6f21d88 b6e73f0c b6b2c96f b6abc704 b6e9c85c  
+    b6f21d98 b6d5d6c0 b6abdab9 b6d6a168 b6d69d78  
+    b6f21da8 b6b885f5 b6e5d248 b6dd745c b6ce6700  
+    b6f21db8 b6d49f54 b6e9cdc8 b6dd7524 b6cac69c  
+    b6f21dc8 b6ce74cc b6d09280 b6d275b8 b6cfc74c  
+    b6f21dd8 b6e73ee8 b6d015c1 b6e78400 b6e49de4  
+
+memory near sp:
+    b33aace0 00009f79 b500f581 b5011b1d b5011ba2  
+    b33aacf0 00000000 b3d7110a 00000000 b500f745  
+    b33aad00 b501c00c 00000000 00000000 00000000  
+    b33aad10 000525c8 b3d71108 00000002 b33aad34  
+    b33aad20 b501be4c 00069098 00000000 b50110ad  
+    b33aad30 b3d5be2c b6f20eb0 b3ecca38 b3d572d8  
+    b33aad40 00000000 000525c8 b33aad7c 0005260c  
+    b33aad50 00000002 00000000 b3d7b4e0 b5010fbd  
+    b33aad60 b33aaf8c b6aec5b3 000527a4 b33aad7c  
+    b33aad70 b33aad80 b5011395 b3ecc840 b6f20eb0  
+    b33aad80 b3ecca38 b3d572d8 b3ecc840 b3ecc82c  
+    b33aad90 b5010e9d 000525c8 00069098 b5011395  
+    b33aada0 b6f51058 b33ab450 b33aaf8c b500e6f1  
+    b33aadb0 b3ecc820 b3ecc84c 00000000 00000040  
+    b33aadc0 00000002 000f4240 b3bbb910 00069078  
+    b33aadd0 b33aadec ffffffff 00000000 b3bbb910  
+
+code around pc:
+    b500f6f4 eeb00a10 eef88b60 eeb81be6 ee010bc7  
+    b500f704 eefc0ba0 ee100bc0 fa1f1a90 45d0fa81  
+    b500f714 78b2d01e 46594638 c003f896 ee073602  
+    b500f724 ee022a90 eeb8ca10 eeb81be7 ee013bc2  
+    b500f734 eefc3b08 ee111bc3 b29a3a90 ff12f7ff  
+    b500f744 bf082800 f1082500 fa1f0001 e7def880  
+    b500f754 4638b955 46224629 b001464b 8b02ecbd  
+    b500f764 4ff0e8bd bf34f7ff ecbdb001 e8bd8b02  
+    b500f774 bf008ff0 00000000 40700000 0000242e  
+    b500f784 0000243b 000024aa 8000f3af 4ff0e92d  
+    b500f794 4691460c 4606492f 20014a2f 4b2f4625  
+    b500f7a4 0800f04f ed2d2701 b0818b02 0b40f106  
+    b500f7b4 447a4479 f7fc447b 7823ec8a eddf7860  
+    b500f7c4 ee060b23 ee073a90 eeb00a10 eef88b60  
+    b500f7d4 eeb81be6 ee010bc7 eefc0ba0 ee100bc0  
+    b500f7e4 fa1f1a90 45d0fa81 78aad01e 46594630  
+
+code around lr:
+    b500f560 000025df 00002588 460cb538 49144615  
+    b500f570 4a142001 44794b14 447b447a eda8f7fc  
+    b500f580 42a06820 8901d004 d11642a9 bd382001  
+    b500f590 2001490e 4a0e462b 447a4479 ed98f7fc  
+    b500f5a0 f7fc200c b118ed68 81052300 60436003  
+    b500f5b0 f7fc4621 2000ed68 6800bd38 bf00e7e1  
+    b500f5c0 00002594 000025a1 00002624 00002572  
+    b500f5d0 000025a9 47f3e92d 460f461e 4a334692  
+    b500f5e0 49339100 93014681 20014b32 080df106  
+    b500f5f0 447a2500 447b4479 ed6af7fc f7fc4640  
+    b500f600 b2f3edf8 70054604 f1037045 330c020a  
+    b500f610 f1067082 0a01000c 70e17123 d8332f03  
+    b500f620 f007e8df 261a0e02 21e92002 27e871a5  
+    b500f630 22a87265 71e17160 72a77220 e02272e0  
+    b500f640 22e82302 726571a5 71e225e9 716322b8  
+    b500f650 72a57223 e01672e3 21e82002 27e971a5  
+
+memory map around fault addr b3d85000:
+    b3d00000-b3d85000
+    b3d85000-b3e00000
+    b3e00000-b3ed5000
+--------- tail end of log /dev/log/main
+04-19 14:07:49.420   130   255 I DEBUG   : debugger_signal_handler
+04-19 14:07:49.420   130   255 I DEBUG   : pid = 130
+04-19 14:07:49.420   130   255 I DEBUG   : tid = 255
+04-19 14:07:49.420   130   255 I DEBUG   : name = NHCanBus_DataCh
+04-19 14:07:49.420   130   255 I DEBUG   : sig num is 11
+
+00008000-0000a000 r-xp 00000000 00:01 402        /sbin/trafficd
+00011000-00012000 r--p 00001000 00:01 402        /sbin/trafficd
+00012000-0007a000 rw-p 00000000 00:00 0          [heap]
+b2a93000-b2a94000 ---p 00000000 00:00 0
+b2a94000-b2aa3000 rw-p 00000000 00:00 0          [stack:1169]
+b2aa3000-b2aa4000 ---p 00000000 00:00 0
+b2aa4000-b32a3000 rw-p 00000000 00:00 0          [stack:287]
+b32a3000-b32a4000 ---p 00000000 00:00 0
+b32a4000-b32b3000 rw-p 00000000 00:00 0          [stack:285]
+b32b3000-b32b4000 ---p 00000000 00:00 0
+b32b4000-b32c3000 rw-p 00000000 00:00 0          [stack:270]
+b32c3000-b32d2000 r-xp 00000000 00:01 168        /lib/libnhdiag.so
+b32d2000-b32da000 ---p 0000f000 00:01 168        /lib/libnhdiag.so
+b32da000-b32db000 r--p 0000f000 00:01 168        /lib/libnhdiag.so
+b32db000-b32dc000 rw-p 00010000 00:01 168        /lib/libnhdiag.so
+b32dc000-b3352000 r-xp 00000000 00:01 121        /lib/libavcprotocol.so
+b3352000-b335a000 ---p 00076000 00:01 121        /lib/libavcprotocol.so
+b335a000-b335b000 r--p 00076000 00:01 121        /lib/libavcprotocol.so
+b335b000-b335c000 rw-p 00077000 00:01 121        /lib/libavcprotocol.so
+b335c000-b335d000 ---p 00000000 00:00 0
+b335d000-b336c000 rw-p 00000000 00:00 0          [stack:259]
+b336c000-b336d000 ---p 00000000 00:00 0
+b336d000-b337c000 rw-p 00000000 00:00 0          [stack:258]
+b337c000-b337d000 ---p 00000000 00:00 0
+b337d000-b338c000 rw-p 00000000 00:00 0          [stack:257]
+b338c000-b338d000 ---p 00000000 00:00 0
+b338d000-b339c000 rw-p 00000000 00:00 0          [stack:256]
+b339c000-b339d000 ---p 00000000 00:00 0
+b339d000-b33ac000 rw-p 00000000 00:00 0          [stack:255]
+b33ac000-b33ad000 ---p 00000000 00:00 0
+b33ad000-b3bac000 rw-p 00000000 00:00 0          [stack:254]
+b3bac000-b3bad000 ---p 00000000 00:00 0
+b3bad000-b3bbc000 rw-p 00000000 00:00 0          [stack:226]
+b3bbc000-b3bbd000 ---p 00000000 00:00 0
+b3bbd000-b3bcc000 rw-p 00000000 00:00 0          [stack:225]
+b3bcc000-b3bcd000 ---p 00000000 00:00 0
+b3bcd000-b3bdc000 rw-p 00000000 00:00 0          [stack:224]
+b3bdc000-b3be0000 r-xp 00000000 00:01 185        /lib/libnhserialio.so
+b3be0000-b3be7000 ---p 00004000 00:01 185        /lib/libnhserialio.so
+b3be7000-b3be8000 r--p 00003000 00:01 185        /lib/libnhserialio.so
+b3be8000-b3be9000 rw-p 00004000 00:01 185        /lib/libnhserialio.so
+b3be9000-b3bea000 r-xp 00000000 00:01 204        /lib/libnihallib.so
+b3bea000-b3bf1000 ---p 00001000 00:01 204        /lib/libnihallib.so
+b3bf1000-b3bf2000 r--p 00000000 00:01 204        /lib/libnihallib.so
+b3bf2000-b3bf3000 rw-p 00001000 00:01 204        /lib/libnihallib.so
+b3bf3000-b3bf9000 r-xp 00000000 00:01 160        /lib/libnhavcunit.so
+b3bf9000-b3c00000 ---p 00006000 00:01 160        /lib/libnhavcunit.so
+b3c00000-b3c01000 r--p 00005000 00:01 160        /lib/libnhavcunit.so
+b3c01000-b3c02000 rw-p 00006000 00:01 160        /lib/libnhavcunit.so
+b3c02000-b3d00000 r--p 00000000 00:0c 3286       /dev/binder
+b3d00000-b3d85000 rw-p 00000000 00:00 0
+b3d85000-b3e00000 ---p 00000000 00:00 0
+b3e00000-b3ed5000 rw-p 00000000 00:00 0
+b3ed5000-b3f00000 ---p 00000000 00:00 0
+b3f00000-b3f01000 ---p 00000000 00:00 0
+b3f01000-b4700000 rw-p 00000000 00:00 0          [stack:198]
+b4700000-b4701000 ---p 00000000 00:00 0
+b4701000-b4f00000 rw-p 00000000 00:00 0          [stack:197]
+b4f00000-b4f28000 rw-p 00000000 00:00 0
+b4f28000-b5000000 ---p 00000000 00:00 0
+b5007000-b5008000 rw-p 00000000 00:00 0
+b5008000-b5013000 r-xp 00000000 00:01 163        /lib/libnhcanbushandler.so
+b5013000-b501b000 ---p 0000b000 00:01 163        /lib/libnhcanbushandler.so
+b501b000-b501c000 r--p 0000b000 00:01 163        /lib/libnhcanbushandler.so
+b501c000-b501d000 rw-p 0000c000 00:01 163        /lib/libnhcanbushandler.so
+b501d000-b501e000 ---p 00000000 00:00 0
+b501e000-b502d000 rw-p 00000000 00:00 0          [stack:200]
+b502d000-b502e000 ---p 00000000 00:00 0
+b502e000-b503e000 rw-p 00000000 00:00 0          [stack:199]
+b503e000-b503f000 ---p 00000000 00:00 0
+b503f000-b583e000 rw-p 00000000 00:00 0          [stack:196]
+b583e000-b583f000 ---p 00000000 00:00 0
+b583f000-b603e000 rw-p 00000000 00:00 0          [stack:195]
+b603e000-b604e000 r--s 00000000 00:0c 2634       /dev/__properties__ (deleted)
+b604e000-b604f000 ---p 00000000 00:00 0
+b604f000-b6850000 rw-p 00000000 00:00 0          [stack:176]
+b6850000-b6889000 r-xp 00000000 00:01 155        /lib/libncmq.so
+b6889000-b6890000 ---p 00039000 00:01 155        /lib/libncmq.so
+b6890000-b6893000 r--p 00038000 00:01 155        /lib/libncmq.so
+b6893000-b6894000 rw-p 0003b000 00:01 155        /lib/libncmq.so
+b6894000-b6897000 r-xp 00000000 00:01 125        /lib/libcorkscrew.so
+b6897000-b689e000 ---p 00003000 00:01 125        /lib/libcorkscrew.so
+b689e000-b689f000 r--p 00002000 00:01 125        /lib/libcorkscrew.so
+b689f000-b68a0000 rw-p 00003000 00:01 125        /lib/libcorkscrew.so
+b68a0000-b68b3000 r-xp 00000000 00:01 306        /lib/libz.so.1.2.8
+b68b3000-b68ba000 ---p 00013000 00:01 306        /lib/libz.so.1.2.8
+b68ba000-b68bb000 rw-p 00012000 00:01 306        /lib/libz.so.1.2.8
+b68bb000-b68bc000 rw-p 00000000 00:00 0
+b68bc000-b6927000 r-xp 00000000 00:01 145        /lib/libm.so.6
+b6927000-b692f000 ---p 0006b000 00:01 145        /lib/libm.so.6
+b692f000-b6930000 r--p 0006b000 00:01 145        /lib/libm.so.6
+b6930000-b6931000 rw-p 0006c000 00:01 145        /lib/libm.so.6
+b6931000-b6964000 r-xp 00000000 00:01 154        /lib/libnceventsys.so
+b6964000-b696c000 ---p 00033000 00:01 154        /lib/libnceventsys.so
+b696c000-b696e000 r--p 00033000 00:01 154        /lib/libnceventsys.so
+b696e000-b696f000 rw-p 00035000 00:01 154        /lib/libnceventsys.so
+b696f000-b6974000 r-xp 00000000 00:01 158        /lib/libncservice.so
+b6974000-b697c000 ---p 00005000 00:01 158        /lib/libncservice.so
+b697c000-b697d000 r--p 00005000 00:01 158        /lib/libncservice.so
+b697d000-b697e000 rw-p 00006000 00:01 158        /lib/libncservice.so
+b697e000-b6980000 r-xp 00000000 00:01 275        /lib/libtimey2038.so
+b6980000-b6987000 ---p 00002000 00:01 275        /lib/libtimey2038.so
+b6987000-b6988000 r--p 00001000 00:01 275        /lib/libtimey2038.so
+b6988000-b6989000 rw-p 00002000 00:01 275        /lib/libtimey2038.so
+b6989000-b6aa8000 r-xp 00000000 00:01 142        /lib/libicui18n.so
+b6aa8000-b6aaf000 ---p 0011f000 00:01 142        /lib/libicui18n.so
+b6aaf000-b6ab5000 r--p 0011e000 00:01 142        /lib/libicui18n.so
+b6ab5000-b6ab6000 rw-p 00124000 00:01 142        /lib/libicui18n.so
+b6ab6000-b6ab7000 rw-p 00000000 00:00 0
+b6ab7000-b6ac7000 r-xp 00000000 00:01 128        /lib/libcutils.so
+b6ac7000-b6ace000 ---p 00010000 00:01 128        /lib/libcutils.so
+b6ace000-b6acf000 r--p 0000f000 00:01 128        /lib/libcutils.so
+b6acf000-b6ad0000 rw-p 00010000 00:01 128        /lib/libcutils.so
+b6ad0000-b6adf000 rw-p 00000000 00:00 0
+b6adf000-b6af4000 r-xp 00000000 00:01 282        /lib/libutils.so
+b6af4000-b6afb000 ---p 00015000 00:01 282        /lib/libutils.so
+b6afb000-b6afc000 r--p 00014000 00:01 282        /lib/libutils.so
+b6afc000-b6afd000 rw-p 00015000 00:01 282        /lib/libutils.so
+b6afd000-b6b1e000 r-xp 00000000 00:01 123        /lib/libbinder.so
+b6b1e000-b6b25000 ---p 00021000 00:01 123        /lib/libbinder.so
+b6b25000-b6b2a000 r--p 00020000 00:01 123        /lib/libbinder.so
+b6b2a000-b6b2b000 rw-p 00025000 00:01 123        /lib/libbinder.so
+b6b2b000-b6b2e000 r-xp 00000000 00:01 144        /lib/liblog.so
+b6b2e000-b6b35000 ---p 00003000 00:01 144        /lib/liblog.so
+b6b35000-b6b36000 r--p 00002000 00:01 144        /lib/liblog.so
+b6b36000-b6b37000 rw-p 00003000 00:01 144        /lib/liblog.so
+b6b37000-b6c31000 r-xp 00000000 00:01 143        /lib/libicuuc.so
+b6c31000-b6c38000 ---p 000fa000 00:01 143        /lib/libicuuc.so
+b6c38000-b6c41000 r--p 000f9000 00:01 143        /lib/libicuuc.so
+b6c41000-b6c42000 rw-p 00102000 00:01 143        /lib/libicuuc.so
+b6c42000-b6c46000 rw-p 00000000 00:00 0
+b6c46000-b6c4d000 r-xp 00000000 00:01 264        /lib/librt.so.1
+b6c4d000-b6c54000 ---p 00007000 00:01 264        /lib/librt.so.1
+b6c54000-b6c55000 r--p 00006000 00:01 264        /lib/librt.so.1
+b6c55000-b6c56000 rw-p 00007000 00:01 264        /lib/librt.so.1
+b6c56000-b6c57000 rw-p 00000000 00:00 0
+b6c57000-b6c6d000 r-xp 00000000 00:01 263        /lib/libpthread.so.0
+b6c6d000-b6c74000 ---p 00016000 00:01 263        /lib/libpthread.so.0
+b6c74000-b6c75000 r--p 00015000 00:01 263        /lib/libpthread.so.0
+b6c75000-b6c76000 rw-p 00016000 00:01 263        /lib/libpthread.so.0
+b6c76000-b6c78000 rw-p 00000000 00:00 0
+b6c78000-b6c7c000 r-xp 00000000 00:01 130        /lib/libdl.so.2
+b6c7c000-b6c83000 ---p 00004000 00:01 130        /lib/libdl.so.2
+b6c83000-b6c84000 r--p 00003000 00:01 130        /lib/libdl.so.2
+b6c84000-b6c85000 rw-p 00004000 00:01 130        /lib/libdl.so.2
+b6c85000-b6dbd000 r-xp 00000000 00:01 124        /lib/libc.so.6
+b6dbd000-b6dc4000 ---p 00138000 00:01 124        /lib/libc.so.6
+b6dc4000-b6dc6000 r--p 00137000 00:01 124        /lib/libc.so.6
+b6dc6000-b6dc7000 rw-p 00139000 00:01 124        /lib/libc.so.6
+b6dc7000-b6dca000 rw-p 00000000 00:00 0
+b6dca000-b6de7000 r-xp 00000000 00:01 140        /lib/libgcc_s.so.1
+b6de7000-b6dee000 ---p 0001d000 00:01 140        /lib/libgcc_s.so.1
+b6dee000-b6def000 rw-p 0001c000 00:01 140        /lib/libgcc_s.so.1
+b6def000-b6eaf000 r-xp 00000000 00:01 273        /lib/libstdc++.so.6
+b6eaf000-b6eb6000 ---p 000c0000 00:01 273        /lib/libstdc++.so.6
+b6eb6000-b6eba000 r--p 000bf000 00:01 273        /lib/libstdc++.so.6
+b6eba000-b6ebc000 rw-p 000c3000 00:01 273        /lib/libstdc++.so.6
+b6ebc000-b6ec2000 rw-p 00000000 00:00 0
+b6ec2000-b6ec6000 r-xp 00000000 00:01 157        /lib/libncprocess.so
+b6ec6000-b6ece000 ---p 00004000 00:01 157        /lib/libncprocess.so
+b6ece000-b6ecf000 r--p 00004000 00:01 157        /lib/libncprocess.so
+b6ecf000-b6ed0000 rw-p 00005000 00:01 157        /lib/libncprocess.so
+b6ed0000-b6ed1000 rw-p 00000000 00:00 0
+b6ed1000-b6ee3000 r-xp 00000000 00:01 162        /lib/libnhbase.so
+b6ee3000-b6eea000 ---p 00012000 00:01 162        /lib/libnhbase.so
+b6eea000-b6eeb000 r--p 00011000 00:01 162        /lib/libnhbase.so
+b6eeb000-b6eec000 rw-p 00012000 00:01 162        /lib/libnhbase.so
+b6eec000-b6f19000 r-xp 00000000 00:01 156        /lib/libncore.so
+b6f19000-b6f20000 ---p 0002d000 00:01 156        /lib/libncore.so
+b6f20000-b6f22000 r--p 0002c000 00:01 156        /lib/libncore.so
+b6f22000-b6f23000 rw-p 0002e000 00:01 156        /lib/libncore.so
+b6f23000-b6f24000 rw-p 00000000 00:00 0
+b6f24000-b6f25000 r-xp 00000000 00:01 122        /lib/libbadass.so
+b6f25000-b6f2c000 ---p 00001000 00:01 122        /lib/libbadass.so
+b6f2c000-b6f2d000 r--p 00000000 00:01 122        /lib/libbadass.so
+b6f2d000-b6f2e000 rw-p 00001000 00:01 122        /lib/libbadass.so
+b6f2e000-b6f2f000 rw-p 00000000 00:00 0
+b6f2f000-b6f4f000 r-xp 00000000 00:01 111        /lib/ld-linux-armhf.so.3
+b6f4f000-b6f50000 r-xp 00000000 00:00 0          [sigpage]
+b6f50000-b6f51000 r--p 00021000 00:01 111        /lib/ld-linux-armhf.so.3
+b6f51000-b6f52000 rw-p 00022000 00:01 111        /lib/ld-linux-armhf.so.3
+be833000-be854000 rw-p 00000000 00:00 0          [stack]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 130, name: trafficd
+    r0 0001469c  r1 00000080  r2 00000001  r3 00000000
+    r4 00000000  r5 00000001  r6 00000080  r7 000000f0
+    r8 b684e4c0  r9 00000001  sl 0001469c  fp 00014698
+    ip be85376c  sp be853780  lr b684e000  pc b6c631e8  cpsr 800e0010
+
+backtrace:
+    #00  pc 0000c1e8  /lib/libpthread.so.0 (pthread_cond_wait+332)
+    #01  pc 00013e1b  /lib/libncore.so (nutshell::NCWaitObj::wait(unsigned int)+78)
+    #02  pc 00003343  /lib/libncprocess.so (nutshell::NCProcess::startMainLoop()+350)
+    #03  pc 000033b5  /lib/libncprocess.so (nutshell::NCProcess::enterloop()+68)
+    #04  pc 00009025  /sbin/trafficd
+    #05  pc 00018324  /lib/libc.so.6 (__libc_start_main+284)
+    #06  pc 000090d8  /sbin/trafficd
+
+stack:
+         be853740  be853824  [stack]
+         be853744  00069198  [heap]
+         be853748  b6f50f10  /lib/ld-linux-armhf.so.3
+         be85374c  b6cfc7d4  /lib/libc.so.6 (malloc+136)
+         be853750  00000000  
+         be853754  00000000  
+         be853758  00049660  [heap]
+         be85375c  be8537a0  [stack]
+         be853760  b6aedee9  /lib/libutils.so
+         be853764  00000000  
+         be853768  00069198  [heap]
+         be85376c  00000000  
+         be853770  00014678  [heap]
+         be853774  00000000  
+         be853778  00000001  
+         be85377c  b6c631cc  /lib/libpthread.so.0 (pthread_cond_wait+304)
+    #00  be853780  00000000  
+         be853784  00000000  
+         be853788  0001467c  [heap]
+         be85378c  be85379c  [stack]
+         be853790  be8537a0  [stack]
+         be853794  00000000  
+         be853798  00014700  [heap]
+         be85379c  b6f00cf7  /lib/libncore.so (nutshell::NCAutoSync::~NCAutoSync()+10)
+         be8537a0  b6c62ec4  /lib/libpthread.so.0
+         be8537a4  be8537b0  [stack]
+         be8537a8  00014718  [heap]
+         be8537ac  00000000  
+         be8537b0  00000000  
+         be8537b4  00014698  [heap]
+         be8537b8  0001467c  [heap]
+         be8537bc  00000000  
+         ........  ........
+    #01  be8537e8  00014678  [heap]
+         be8537ec  ffffffff  
+         be8537f0  00000000  
+         be8537f4  be853884  [stack]
+         be8537f8  00000000  
+         be8537fc  b6ecf008  /lib/libncprocess.so
+         be853800  b6ecf010  /lib/libncprocess.so
+         be853804  b6ec5347  /lib/libncprocess.so (nutshell::NCProcess::startMainLoop()+354)
+    #02  be853808  00069100  [heap]
+         be85380c  b6aec3c1  /lib/libutils.so (android::RefBase::weakref_type::decWeak(void const*)+12)
+         be853810  b6b29abc  /lib/libbinder.so
+         be853814  b6ec5b80  /lib/libncprocess.so
+         be853818  b6ec5b4c  /lib/libncprocess.so
+         be85381c  b6ecf010  /lib/libncprocess.so
+         be853820  be853884  [stack]
+         be853824  b6ecf010  /lib/libncprocess.so
+         be853828  315f7265  
+         be85382c  00000000  
+         be853830  be85384c  [stack]
+         be853834  57554100  
+         be853838  be853854  [stack]
+         be85383c  be853884  [stack]
+         be853840  be853864  [stack]
+         be853844  b6f50f10  /lib/ld-linux-armhf.so.3
+         ........  ........
+    #03  be853860  b6f50f10  /lib/ld-linux-armhf.so.3
+         be853864  000495f0  [heap]
+         be853868  00000082  
+         be85386c  be853a74  [stack]
+         be853870  00009404  /sbin/trafficd
+         be853874  00009029  /sbin/trafficd
+    #04  be853878  00000082  
+         be85387c  00000655  
+         be853880  00000000  
+         be853884  00011e08  /sbin/trafficd
+         be853888  b6f20eb0  /lib/libncore.so
+         be85388c  00014630  [heap]
+         be853890  b6f20eb0  /lib/libncore.so
+         be853894  00014650  [heap]
+         be853898  00000655  
+         be85389c  00000001  
+         be8538a0  00014670  [heap]
+         be8538a4  b6f21038  /lib/libncore.so
+         be8538a8  b6f21018  /lib/libncore.so
+         be8538ac  00049010  [heap]
+         be8538b0  000147a8  [heap]
+         be8538b4  0000001f  
+         ........  ........
+    #05  be853920  b6dc6000  /lib/libc.so.6
+         be853924  be853a74  [stack]
+         be853928  00000001  
+         be85392c  00008f9d  /sbin/trafficd
+         be853930  ffffffff  
+         be853934  00000000  
+         be853938  00000000  
+         be85393c  00000000  
+         be853940  000090b0  /sbin/trafficd
+         be853944  00000000  
+         be853948  00000000  
+         be85394c  00000000  
+         be853950  b6f51000  /lib/ld-linux-armhf.so.3
+         be853954  00000000  
+         be853958  4f0ceb6e  
+         be85395c  474000ae  
+         ........  ........
+    #06  be853a68  000093d4  /sbin/trafficd
+         be853a6c  b6f3f54c  /lib/ld-linux-armhf.so.3
+         be853a70  be853a74  [stack]
+         be853a74  be853bb7  [stack]
+         be853a78  00000000  
+         be853a7c  be853bc6  [stack]
+         be853a80  be853be6  [stack]
+         be853a84  be853c16  [stack]
+         be853a88  be853c44  [stack]
+         be853a8c  be853c59  [stack]
+         be853a90  be853c74  [stack]
+         be853a94  be853c87  [stack]
+         be853a98  be853ca4  [stack]
+         be853a9c  be853cc4  [stack]
+         be853aa0  be853ce7  [stack]
+         be853aa4  be853d04  [stack]
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 176, name: LogListener
+    r0 0000000e  r1 b684c4a8  r2 00000000  r3 00000000
+    r4 00000000  r5 b684c4a8  r6 00000000  r7 0000008e
+    r8 b684c5a4  r9 00002000  sl b6f23ba0  fp b684c614
+    ip 00000000  sp b684c480  lr b684d450  pc b6d55214  cpsr 80010010
+
+backtrace:
+    #00  pc 000d0214  /lib/libc.so.6 (__select+68)
+    #01  pc 000259f7  /lib/libncore.so
+    #02  pc 00007228  /lib/libpthread.so.0
+    #03  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b684c440  b6b2d70e  /lib/liblog.so
+         b684c444  b4f00898  
+         b684c448  00002000  
+         b684c44c  b4f26f88  
+         b684c450  b684c614  [stack:176]
+         b684c454  b6f23ba4  
+         b684c458  b6f23bc4  
+         b684c45c  00000000  
+         b684c460  b684c618  [stack:176]
+         b684c464  00000000  
+         b684c468  b684c4a8  [stack:176]
+         b684c46c  b6d55208  /lib/libc.so.6 (__select+56)
+         b684c470  0000000e  
+         b684c474  b684c4a8  [stack:176]
+         b684c478  00000000  
+         b684c47c  00000000  
+    #00  b684c480  00000000  
+         b684c484  b6f119fb  /lib/libncore.so
+         b684c488  0000000d  
+         b684c48c  b684c528  [stack:176]
+    #01  b684c490  00000000  
+         b684c494  00000000  
+         b684c498  00000000  
+         b684c49c  b684c5a6  [stack:176]
+         b684c4a0  b6f15fc8  /lib/libncore.so
+         b684c4a4  b6f50f10  /lib/ld-linux-armhf.so.3
+         b684c4a8  00002000  
+         b684c4ac  00000000  
+         b684c4b0  00000000  
+         b684c4b4  00000000  
+         b684c4b8  00000000  
+         b684c4bc  00000000  
+         b684c4c0  00000000  
+         b684c4c4  00000000  
+         b684c4c8  00000000  
+         b684c4cc  00000000  
+         ........  ........
+    #02  b684ce48  b684d668  [stack:176]
+         b684ce4c  b684d450  [stack:176]
+         b684ce50  00000000  
+         b684ce54  00000000  
+         b684ce58  b684d4b8  [stack:176]
+         b684ce5c  00000000  
+         b684ce60  be8539d8  [stack]
+         b684ce64  00000152  
+         b684ce68  b684e4c0  [stack:176]
+         b684ce6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b684ce70  b684d450  [stack:176]
+         b684ce74  b684cf8c  [stack:176]
+         b684ce78  470d1c06  
+         b684ce7c  474c33b2  
+         b684ce80  00000000  
+         b684ce84  00000000  
+         ........  ........
+    #03  b684cf90  00000000  
+         b684cf94  00000000  
+         b684cf98  00000000  
+         b684cf9c  00000000  
+         b684cfa0  00000000  
+         b684cfa4  00000000  
+         b684cfa8  00000000  
+         b684cfac  00000000  
+         b684cfb0  00000000  
+         b684cfb4  00000000  
+         b684cfb8  00000000  
+         b684cfbc  00000000  
+         b684cfc0  00000000  
+         b684cfc4  00000000  
+         b684cfc8  00000000  
+         b684cfcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 195, name: trafficd
+    r0 fffffffc  r1 b603bd60  r2 00000100  r3 ffffffff
+    r4 0001acb8  r5 00000000  r6 b603bd60  r7 000000fc
+    r8 ffffffff  r9 b688418f  sl b603d450  fp b603cf8c
+    ip 00000000  sp b603bd38  lr b603d450  pc b6d5d014  cpsr 800f0010
+
+backtrace:
+    #00  pc 000d8014  /lib/libc.so.6 (epoll_wait+68)
+    #01  pc 0000e777  /lib/libncmq.so
+    #02  pc 0001592b  /lib/libncmq.so
+    #03  pc 00007228  /lib/libpthread.so.0
+    #04  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b603bcf8  00000000  
+         b603bcfc  00000000  
+         b603bd00  00000000  
+         b603bd04  00000000  
+         b603bd08  00000000  
+         b603bd0c  00000000  
+         b603bd10  00000000  
+         b603bd14  00000000  
+         b603bd18  00000000  
+         b603bd1c  0001acb8  [heap]
+         b603bd20  00000000  
+         b603bd24  b6d5d004  /lib/libc.so.6 (epoll_wait+52)
+         b603bd28  0000000a  
+         b603bd2c  b603bd60  [stack:195]
+         b603bd30  00000100  
+         b603bd34  ffffffff  
+    #00  b603bd38  b685e77b  /lib/libncmq.so
+         b603bd3c  b603bd50  [stack:195]
+    #01  b603bd40  00000000  
+         b603bd44  00000000  
+         b603bd48  00000000  
+         b603bd4c  00000000  
+         b603bd50  00000000  
+         b603bd54  00000000  
+         b603bd58  b688401d  /lib/libncmq.so
+         b603bd5c  b6883fd0  /lib/libncmq.so
+         b603bd60  00000000  
+         b603bd64  00000000  
+         b603bd68  00000000  
+         b603bd6c  00000000  
+         b603bd70  00000000  
+         b603bd74  00000000  
+         b603bd78  00000000  
+         b603bd7c  00000000  
+         ........  ........
+    #02  b603cd88  00000000  
+         b603cd8c  00000000  
+         b603cd90  00000000  
+         b603cd94  00000000  
+         b603cd98  00000000  
+         b603cd9c  00000000  
+         b603cda0  7fffffff  
+         b603cda4  fffffffe  
+         b603cda8  ffffffff  
+         b603cdac  ffffffff  
+         b603cdb0  ffffffff  
+         b603cdb4  ffffffff  
+         b603cdb8  ffffffff  
+         b603cdbc  ffffffff  
+         b603cdc0  ffffffff  
+         b603cdc4  ffffffff  
+         ........  ........
+    #03  b603ce48  b603d668  [stack:195]
+         b603ce4c  b603d450  [stack:195]
+         b603ce50  00000000  
+         b603ce54  00000000  
+         b603ce58  b603d4b8  [stack:195]
+         b603ce5c  00000000  
+         b603ce60  be8534e0  [stack]
+         b603ce64  00000152  
+         b603ce68  b684e4c0  [stack:176]
+         b603ce6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b603ce70  b603d450  [stack:195]
+         b603ce74  b603cf8c  [stack:195]
+         b603ce78  478a1c06  
+         b603ce7c  474c33b2  
+         b603ce80  00000000  
+         b603ce84  00000000  
+         ........  ........
+    #04  b603cf90  00000000  
+         b603cf94  00000000  
+         b603cf98  00000000  
+         b603cf9c  00000000  
+         b603cfa0  00000000  
+         b603cfa4  00000000  
+         b603cfa8  00000000  
+         b603cfac  00000000  
+         b603cfb0  00000000  
+         b603cfb4  00000000  
+         b603cfb8  00000000  
+         b603cfbc  00000000  
+         b603cfc0  00000000  
+         b603cfc4  00000000  
+         b603cfc8  00000000  
+         b603cfcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 196, name: nmq_io_tr_00
+    r0 fffffffc  r1 b583bd60  r2 00000100  r3 ffffffff
+    r4 0001afe8  r5 00000000  r6 b583bd60  r7 000000fc
+    r8 00000001  r9 b688418f  sl b4f1c868  fp b583cf8c
+    ip 00000000  sp b583bd38  lr b583d450  pc b6d5d014  cpsr 80000010
+
+backtrace:
+    #00  pc 000d8014  /lib/libc.so.6 (epoll_wait+68)
+    #01  pc 0000e777  /lib/libncmq.so
+    #02  pc 0001592b  /lib/libncmq.so
+    #03  pc 00007228  /lib/libpthread.so.0
+    #04  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b583bcf8  b3e55f80  
+         b583bcfc  b6890ab8  /lib/libncmq.so
+         b583bd00  b685d9c1  /lib/libncmq.so
+         b583bd04  00000001  
+         b583bd08  b688418f  /lib/libncmq.so
+         b583bd0c  b4f1c868  
+         b583bd10  b583cf8c  [stack:196]
+         b583bd14  00000000  
+         b583bd18  b4f08e08  
+         b583bd1c  0001afe8  [heap]
+         b583bd20  00000000  
+         b583bd24  b6d5d004  /lib/libc.so.6 (epoll_wait+52)
+         b583bd28  0000000c  
+         b583bd2c  b583bd60  [stack:196]
+         b583bd30  00000100  
+         b583bd34  ffffffff  
+    #00  b583bd38  b685e77b  /lib/libncmq.so
+         b583bd3c  b583bd50  [stack:196]
+    #01  b583bd40  00000000  
+         b583bd44  00000000  
+         b583bd48  00000000  
+         b583bd4c  00000000  
+         b583bd50  00000000  
+         b583bd54  00000000  
+         b583bd58  b688401d  /lib/libncmq.so
+         b583bd5c  b6883fd0  /lib/libncmq.so
+         b583bd60  00000004  
+         b583bd64  00000000  
+         b583bd68  b4f1c868  
+         b583bd6c  00000000  
+         b583bd70  00000004  
+         b583bd74  00000000  
+         b583bd78  b4f1c868  
+         b583bd7c  00000000  
+         ........  ........
+    #02  b583cd88  00000000  
+         b583cd8c  00000000  
+         b583cd90  00000000  
+         b583cd94  00000000  
+         b583cd98  00000000  
+         b583cd9c  00000000  
+         b583cda0  7fffffff  
+         b583cda4  fffffffe  
+         b583cda8  ffffffff  
+         b583cdac  ffffffff  
+         b583cdb0  ffffffff  
+         b583cdb4  ffffffff  
+         b583cdb8  ffffffff  
+         b583cdbc  ffffffff  
+         b583cdc0  ffffffff  
+         b583cdc4  ffffffff  
+         ........  ........
+    #03  b583ce48  b583d668  [stack:196]
+         b583ce4c  b583d450  [stack:196]
+         b583ce50  00000000  
+         b583ce54  00000000  
+         b583ce58  b583d4b8  [stack:196]
+         b583ce5c  00000000  
+         b583ce60  be8534e0  [stack]
+         b583ce64  00000152  
+         b583ce68  b684e4c0  [stack:176]
+         b583ce6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b583ce70  b583d450  [stack:196]
+         b583ce74  b583cf8c  [stack:196]
+         b583ce78  440a1c06  
+         b583ce7c  474c33b2  
+         b583ce80  00000000  
+         b583ce84  00000000  
+         ........  ........
+    #04  b583cf90  00000000  
+         b583cf94  00000000  
+         b583cf98  00000000  
+         b583cf9c  00000000  
+         b583cfa0  00000000  
+         b583cfa4  00000000  
+         b583cfa8  00000000  
+         b583cfac  00000000  
+         b583cfb0  00000000  
+         b583cfb4  00000000  
+         b583cfb8  00000000  
+         b583cfbc  00000000  
+         b583cfc0  00000000  
+         b583cfc4  00000000  
+         b583cfc8  00000000  
+         b583cfcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 197, name: nmq_io_tr_01
+    r0 fffffffc  r1 b4efdd60  r2 00000100  r3 ffffffff
+    r4 0001b318  r5 00000000  r6 b4efdd60  r7 000000fc
+    r8 00000001  r9 b688418f  sl b3d00848  fp b4efef8c
+    ip 00000000  sp b4efdd38  lr b4eff450  pc b6d5d014  cpsr 80030010
+
+backtrace:
+    #00  pc 000d8014  /lib/libc.so.6 (epoll_wait+68)
+    #01  pc 0000e777  /lib/libncmq.so
+    #02  pc 0001592b  /lib/libncmq.so
+    #03  pc 00007228  /lib/libpthread.so.0
+    #04  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b4efdcf8  b3e3dac8  
+         b4efdcfc  00000005  
+         b4efdd00  00000148  
+         b4efdd04  b685c43b  /lib/libncmq.so
+         b4efdd08  b3d09b90  
+         b4efdd0c  b3e3db38  
+         b4efdd10  b3d0abb0  
+         b4efdd14  00000000  
+         b4efdd18  b3d09b90  
+         b4efdd1c  0001b318  [heap]
+         b4efdd20  00000000  
+         b4efdd24  b6d5d004  /lib/libc.so.6 (epoll_wait+52)
+         b4efdd28  0000000f  
+         b4efdd2c  b4efdd60  [stack:197]
+         b4efdd30  00000100  
+         b4efdd34  ffffffff  
+    #00  b4efdd38  b685e77b  /lib/libncmq.so
+         b4efdd3c  b4efdd50  [stack:197]
+    #01  b4efdd40  00000000  
+         b4efdd44  00000000  
+         b4efdd48  00000000  
+         b4efdd4c  00000000  
+         b4efdd50  00000000  
+         b4efdd54  00000000  
+         b4efdd58  b688401d  /lib/libncmq.so
+         b4efdd5c  b6883fd0  /lib/libncmq.so
+         b4efdd60  00000001  
+         b4efdd64  00000000  
+         b4efdd68  b3d00848  
+         b4efdd6c  00000000  
+         b4efdd70  00000004  
+         b4efdd74  00000000  
+         b4efdd78  b3d00590  
+         b4efdd7c  00000000  
+         ........  ........
+    #02  b4efed88  00000000  
+         b4efed8c  00000000  
+         b4efed90  00000000  
+         b4efed94  00000000  
+         b4efed98  00000000  
+         b4efed9c  00000000  
+         b4efeda0  7fffffff  
+         b4efeda4  fffffffe  
+         b4efeda8  ffffffff  
+         b4efedac  ffffffff  
+         b4efedb0  ffffffff  
+         b4efedb4  ffffffff  
+         b4efedb8  ffffffff  
+         b4efedbc  ffffffff  
+         b4efedc0  ffffffff  
+         b4efedc4  ffffffff  
+         ........  ........
+    #03  b4efee48  b4eff668  [stack:197]
+         b4efee4c  b4eff450  [stack:197]
+         b4efee50  00000000  
+         b4efee54  00000000  
+         b4efee58  b4eff4b8  [stack:197]
+         b4efee5c  00000000  
+         b4efee60  be8534e0  [stack]
+         b4efee64  00000152  
+         b4efee68  b684e4c0  [stack:176]
+         b4efee6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b4efee70  b4eff450  [stack:197]
+         b4efee74  b4efef8c  [stack:197]
+         b4efee78  45663c06  
+         b4efee7c  474c33b2  
+         b4efee80  00000000  
+         b4efee84  00000000  
+         ........  ........
+    #04  b4efef90  00000000  
+         b4efef94  00000000  
+         b4efef98  00000000  
+         b4efef9c  00000000  
+         b4efefa0  00000000  
+         b4efefa4  00000000  
+         b4efefa8  00000000  
+         b4efefac  00000000  
+         b4efefb0  00000000  
+         b4efefb4  00000000  
+         b4efefb8  00000000  
+         b4efefbc  00000000  
+         b4efefc0  00000000  
+         b4efefc4  00000000  
+         b4efefc8  00000000  
+         b4efefcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 198, name: nmq_io_tr_02
+    r0 fffffffc  r1 b46fdd60  r2 00000100  r3 ffffffff
+    r4 0001b658  r5 00000000  r6 b46fdd60  r7 000000fc
+    r8 00000001  r9 b688418f  sl b3ea1e68  fp b46fef8c
+    ip 00000000  sp b46fdd38  lr b46ff450  pc b6d5d014  cpsr 80000010
+
+backtrace:
+    #00  pc 000d8014  /lib/libc.so.6 (epoll_wait+68)
+    #01  pc 0000e777  /lib/libncmq.so
+    #02  pc 0001592b  /lib/libncmq.so
+    #03  pc 00007228  /lib/libpthread.so.0
+    #04  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b46fdcf8  b3ea1df8  
+         b46fdcfc  00000005  
+         b46fdd00  0000002f  
+         b46fdd04  b685c43b  /lib/libncmq.so
+         b46fdd08  b3e948d0  
+         b46fdd0c  b3ea1d88  
+         b46fdd10  b3e958f0  
+         b46fdd14  00000000  
+         b46fdd18  b3e948d0  
+         b46fdd1c  0001b658  [heap]
+         b46fdd20  00000000  
+         b46fdd24  b6d5d004  /lib/libc.so.6 (epoll_wait+52)
+         b46fdd28  00000011  
+         b46fdd2c  b46fdd60  [stack:198]
+         b46fdd30  00000100  
+         b46fdd34  ffffffff  
+    #00  b46fdd38  b685e77b  /lib/libncmq.so
+         b46fdd3c  b46fdd50  [stack:198]
+    #01  b46fdd40  00000000  
+         b46fdd44  00000000  
+         b46fdd48  00000000  
+         b46fdd4c  00000000  
+         b46fdd50  00000000  
+         b46fdd54  00000000  
+         b46fdd58  b688401d  /lib/libncmq.so
+         b46fdd5c  b6883fd0  /lib/libncmq.so
+         b46fdd60  00000001  
+         b46fdd64  00000000  
+         b46fdd68  b3ea1e68  
+         b46fdd6c  00000000  
+         b46fdd70  00000000  
+         b46fdd74  00000000  
+         b46fdd78  00000000  
+         b46fdd7c  00000000  
+         ........  ........
+    #02  b46fed88  00000000  
+         b46fed8c  00000000  
+         b46fed90  00000000  
+         b46fed94  00000000  
+         b46fed98  00000000  
+         b46fed9c  00000000  
+         b46feda0  7fffffff  
+         b46feda4  fffffffe  
+         b46feda8  ffffffff  
+         b46fedac  ffffffff  
+         b46fedb0  ffffffff  
+         b46fedb4  ffffffff  
+         b46fedb8  ffffffff  
+         b46fedbc  ffffffff  
+         b46fedc0  ffffffff  
+         b46fedc4  ffffffff  
+         ........  ........
+    #03  b46fee48  b46ff668  [stack:198]
+         b46fee4c  b46ff450  [stack:198]
+         b46fee50  00000000  
+         b46fee54  00000000  
+         b46fee58  b46ff4b8  [stack:198]
+         b46fee5c  00000000  
+         b46fee60  be8534e0  [stack]
+         b46fee64  00000152  
+         b46fee68  b684e4c0  [stack:176]
+         b46fee6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b46fee70  b46ff450  [stack:198]
+         b46fee74  b46fef8c  [stack:198]
+         b46fee78  45e63c06  
+         b46fee7c  474c33b2  
+         b46fee80  00000000  
+         b46fee84  00000000  
+         ........  ........
+    #04  b46fef90  00000000  
+         b46fef94  00000000  
+         b46fef98  00000000  
+         b46fef9c  00000000  
+         b46fefa0  00000000  
+         b46fefa4  00000000  
+         b46fefa8  00000000  
+         b46fefac  00000000  
+         b46fefb0  00000000  
+         b46fefb4  00000000  
+         b46fefb8  00000000  
+         b46fefbc  00000000  
+         b46fefc0  00000000  
+         b46fefc4  00000000  
+         b46fefc8  00000000  
+         b46fefcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 199, name: EvsDispatcher
+    r0 00014d6c  r1 00000080  r2 00038dfb  r3 00000000
+    r4 00000000  r5 00038dfb  r6 00000080  r7 000000f0
+    r8 b503c910  r9 00000001  sl 00014d6c  fp 00014d68
+    ip b503bd6c  sp b503bd80  lr b503c450  pc b6c631e8  cpsr 80010010
+
+backtrace:
+    #00  pc 0000c1e8  /lib/libpthread.so.0 (pthread_cond_wait+332)
+    #01  pc 00013e1b  /lib/libncore.so (nutshell::NCWaitObj::wait(unsigned int)+78)
+    #02  pc 00026d75  /lib/libnceventsys.so
+    #03  pc 00019dfb  /lib/libncore.so
+    #04  pc 00019395  /lib/libncore.so
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b503bd40  00000000  
+         b503bd44  00000000  
+         b503bd48  00000000  
+         b503bd4c  00000000  
+         b503bd50  00000000  
+         b503bd54  00000000  
+         b503bd58  00000000  
+         b503bd5c  00000000  
+         b503bd60  00000000  
+         b503bd64  00000000  
+         b503bd68  00000000  
+         b503bd6c  00000000  
+         b503bd70  00014d48  [heap]
+         b503bd74  00000000  
+         b503bd78  00038dfb  [heap]
+         b503bd7c  b6c631cc  /lib/libpthread.so.0 (pthread_cond_wait+304)
+    #00  b503bd80  0001c6fd  [heap]
+         b503bd84  00000000  
+         b503bd88  00014d4c  [heap]
+         b503bd8c  b503bd9c  [stack:199]
+         b503bd90  b503bda0  [stack:199]
+         b503bd94  00000000  
+         b503bd98  00000000  
+         b503bd9c  00000000  
+         b503bda0  b6c62ec4  /lib/libpthread.so.0
+         b503bda4  b503bdb0  [stack:199]
+         b503bda8  00000000  
+         b503bdac  00000000  
+         b503bdb0  00000000  
+         b503bdb4  00014d68  [heap]
+         b503bdb8  00014d4c  [heap]
+         b503bdbc  00000000  
+         ........  ........
+    #01  b503bde8  00014d48  [heap]
+         b503bdec  ffffffff  
+         b503bdf0  00014cf8  [heap]
+         b503bdf4  00014d20  [heap]
+         b503bdf8  00014d04  [heap]
+         b503bdfc  00000000  
+         b503be00  00014d0c  [heap]
+         b503be04  b6957d79  /lib/libnceventsys.so
+    #02  b503be08  00019840  [heap]
+         b503be0c  00019846  [heap]
+         b503be10  000000c7  
+         b503be14  00000006  
+         b503be18  b684e4c0  [stack:176]
+         b503be1c  b6f05dfd  /lib/libncore.so
+    #03  b503be20  00000006  
+         b503be24  00000660  
+         b503be28  b6f05da5  /lib/libncore.so
+         b503be2c  00000000  
+         b503be30  00000000  
+         b503be34  000198ac  [heap]
+         b503be38  00000152  
+         b503be3c  b6f05397  /lib/libncore.so
+    #04  b503be40  b6f0538d  /lib/libncore.so
+         b503be44  b6c5e22c  /lib/libpthread.so.0
+    #05  b503be48  b503c668  [stack:199]
+         b503be4c  b503c450  [stack:199]
+         b503be50  00000000  
+         b503be54  00000000  
+         b503be58  b503c4b8  [stack:199]
+         b503be5c  00000000  
+         b503be60  000198ac  [heap]
+         b503be64  00000152  
+         b503be68  b684e4c0  [stack:176]
+         b503be6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b503be70  b503c450  [stack:199]
+         b503be74  b503bf8c  [stack:199]
+         b503be78  448a6c06  
+         b503be7c  474c33b2  
+         b503be80  00000000  
+         b503be84  00000000  
+         ........  ........
+    #06  b503bf90  00000000  
+         b503bf94  00000000  
+         b503bf98  00000000  
+         b503bf9c  00000000  
+         b503bfa0  00000000  
+         b503bfa4  00000000  
+         b503bfa8  00000000  
+         b503bfac  00000000  
+         b503bfb0  00000000  
+         b503bfb4  00000000  
+         b503bfb8  00000000  
+         b503bfbc  00000000  
+         b503bfc0  00000000  
+         b503bfc4  00000000  
+         b503bfc8  00000000  
+         b503bfcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 200, name: poller_tr_0
+    r0 b3eca010  r1 0000000c  r2 ffffffff  r3 00000000
+    r4 b3eca010  r5 ffffffff  r6 b3e01588  r7 000000a8
+    r8 0000000c  r9 b502bb88  sl 00000000  fp 00000000
+    ip 00000000  sp b502bb40  lr b502c450  pc b6d4dc50  cpsr 80070010
+
+backtrace:
+    #00  pc 000c8c50  /lib/libc.so.6 (poll+64)
+    #01  pc 000303bf  /lib/libncmq.so (nutshell::NCMQHelper::poll(ncmq_pollitem_t*, int, long)+374)
+    #02  pc 0001cf5b  /lib/libnceventsys.so (nutshell::NCIpcPoller::run()+1098)
+    #03  pc 00019dfb  /lib/libncore.so
+    #04  pc 00019395  /lib/libncore.so
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b502bb00  b502bb88  [stack:200]
+         b502bb04  00000000  
+         b502bb08  00000000  
+         b502bb0c  b687a18f  /lib/libncmq.so
+         b502bb10  b502bb58  [stack:200]
+         b502bb14  b3e014f8  
+         b502bb18  b502bb88  [stack:200]
+         b502bb1c  00000000  
+         b502bb20  00000000  
+         b502bb24  b3eca010  
+         b502bb28  ffffffff  
+         b502bb2c  b6d4dc44  /lib/libc.so.6 (poll+52)
+         b502bb30  b3eca010  
+         b502bb34  0000000c  
+         b502bb38  ffffffff  
+         b502bb3c  00000000  
+    #00  b502bb40  b68803c3  /lib/libncmq.so (nutshell::NCMQHelper::poll(ncmq_pollitem_t*, int, long)+378)
+         b502bb44  b502bb58  [stack:200]
+    #01  b502bb48  00000000  
+         b502bb4c  00000000  
+         b502bb50  00000000  
+         b502bb54  00000000  
+         b502bb58  00000000  
+         b502bb5c  b502bb80  [stack:200]
+         b502bb60  b502bb84  [stack:200]
+         b502bb64  00000000  
+         b502bb68  b3e014f8  
+         b502bb6c  0000000c  
+         b502bb70  00000000  
+         b502bb74  00000000  
+         b502bb78  00000000  
+         b502bb7c  00000000  
+         b502bb80  00000004  
+         b502bb84  00000002  
+         ........  ........
+    #02  b502bbc0  000000c8  
+         b502bbc4  b502bbf4  [stack:200]
+         b502bbc8  00000000  
+         b502bbcc  b6f50f10  /lib/ld-linux-armhf.so.3
+         b502bbd0  b696dbd8  /lib/libnceventsys.so
+         b502bbd4  00014f7c  [heap]
+         b502bbd8  b695f086  /lib/libnceventsys.so
+         b502bbdc  b695ed35  /lib/libnceventsys.so
+         b502bbe0  00000000  
+         b502bbe4  b696c628  /lib/libnceventsys.so
+         b502bbe8  00000000  
+         b502bbec  00000000  
+         b502bbf0  00000000  
+         b502bbf4  6c6c6f50  
+         b502bbf8  20676e69  
+         b502bbfc  65726874  
+         ........  ........
+    #03  b502be20  00000006  
+         b502be24  00000660  
+         b502be28  b6f05da5  /lib/libncore.so
+         b502be2c  00000000  
+         b502be30  00000000  
+         b502be34  000199cc  [heap]
+         b502be38  00000152  
+         b502be3c  b6f05397  /lib/libncore.so
+    #04  b502be40  b6f0538d  /lib/libncore.so
+         b502be44  b6c5e22c  /lib/libpthread.so.0
+    #05  b502be48  b502c668  [stack:200]
+         b502be4c  b502c450  [stack:200]
+         b502be50  00000000  
+         b502be54  00000000  
+         b502be58  b502c4b8  [stack:200]
+         b502be5c  00000000  
+         b502be60  000199cc  [heap]
+         b502be64  00000152  
+         b502be68  b684e4c0  [stack:176]
+         b502be6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b502be70  b502c450  [stack:200]
+         b502be74  b502bf8c  [stack:200]
+         b502be78  448b6c06  
+         b502be7c  474c33b2  
+         b502be80  00000000  
+         b502be84  00000000  
+         ........  ........
+    #06  b502bf90  00000000  
+         b502bf94  00000000  
+         b502bf98  00000000  
+         b502bf9c  00000000  
+         b502bfa0  00000000  
+         b502bfa4  00000000  
+         b502bfa8  00000000  
+         b502bfac  00000000  
+         b502bfb0  00000000  
+         b502bfb4  00000000  
+         b502bfb8  00000000  
+         b502bfbc  00000000  
+         b502bfc0  00000000  
+         b502bfc4  00000000  
+         b502bfc8  00000000  
+         b502bfcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 224, name: NHCheckTimeout
+    r0 0004adcc  r1 00000080  r2 00000055  r3 00000000
+    r4 00000000  r5 00000055  r6 00000080  r7 000000f0
+    r8 b3bdb910  r9 00000001  sl 0004adcc  fp 0004adc8
+    ip b3bda914  sp b3bda928  lr b3bdb450  pc b6c631e8  cpsr 80000010
+
+backtrace:
+    #00  pc 0000c1e8  /lib/libpthread.so.0 (pthread_cond_wait+332)
+    #01  pc 00019873  /lib/libncore.so
+    #02  pc 00007adf  /lib/libnhbase.so
+    #03  pc 00019dfb  /lib/libncore.so
+    #04  pc 00019395  /lib/libncore.so
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b3bda8e8  6e757220  
+         b3bda8ec  ffffffff  
+         b3bda8f0  30202c34  
+         b3bda8f4  34323278  
+         b3bda8f8  72702029  
+         b3bda8fc  203a6f69  
+         b3bda900  54202c39  
+         b3bda904  32203a43  
+         b3bda908  2e323032  
+         b3bda90c  00000002  
+         b3bda910  00000053  
+         b3bda914  00000000  
+         b3bda918  0004ad18  [heap]
+         b3bda91c  00000000  
+         b3bda920  00000055  
+         b3bda924  b6c631cc  /lib/libpthread.so.0 (pthread_cond_wait+304)
+    #00  b3bda928  0000002a  
+         b3bda92c  00000000  
+         b3bda930  0004ada8  [heap]
+         b3bda934  b3bda944  [stack:224]
+         b3bda938  b3bda948  [stack:224]
+         b3bda93c  00000000  
+         b3bda940  00000000  
+         b3bda944  3b9ac35c  
+         b3bda948  b6c62ec4  /lib/libpthread.so.0
+         b3bda94c  b3bda958  [stack:224]
+         b3bda950  00000000  
+         b3bda954  00000000  
+         b3bda958  00000000  
+         b3bda95c  0004adc8  [heap]
+         b3bda960  0004ada8  [heap]
+         b3bda964  00000000  
+         ........  ........
+    #01  b3bda990  0004ad18  [heap]
+         b3bda994  ffffffff  
+         b3bda998  0004d888  [heap]
+         b3bda99c  00010d37  
+         b3bda9a0  00000033  
+         b3bda9a4  b6eea680  /lib/libnhbase.so
+         b3bda9a8  b3bda9f4  [stack:224]
+         b3bda9ac  b6ed8ae1  /lib/libnhbase.so
+    #02  b3bda9b0  00000000  
+         b3bda9b4  00000000  
+         b3bda9b8  00000000  
+         b3bda9bc  00000000  
+         b3bda9c0  00000000  
+         b3bda9c4  00000000  
+         b3bda9c8  00000000  
+         b3bda9cc  00000000  
+         b3bda9d0  00000000  
+         b3bda9d4  00000000  
+         b3bda9d8  00000000  
+         b3bda9dc  00000000  
+         b3bda9e0  00000000  
+         b3bda9e4  b6f50f10  /lib/ld-linux-armhf.so.3
+         b3bda9e8  b6edf2c5  /lib/libnhbase.so
+         b3bda9ec  b6edf2cf  /lib/libnhbase.so
+         ........  ........
+    #03  b3bdae20  00000009  
+         b3bdae24  0000089a  
+         b3bdae28  b6f05da5  /lib/libncore.so
+         b3bdae2c  00000000  
+         b3bdae30  00000000  
+         b3bdae34  0004ad84  [heap]
+         b3bdae38  00000152  
+         b3bdae3c  b6f05397  /lib/libncore.so
+    #04  b3bdae40  b6f0538d  /lib/libncore.so
+         b3bdae44  b6c5e22c  /lib/libpthread.so.0
+    #05  b3bdae48  b3bdb668  [stack:224]
+         b3bdae4c  b3bdb450  [stack:224]
+         b3bdae50  00000000  
+         b3bdae54  00000000  
+         b3bdae58  b3bdb4b8  [stack:224]
+         b3bdae5c  00000000  
+         b3bdae60  0004ad84  [heap]
+         b3bdae64  00000152  
+         b3bdae68  b684e4c0  [stack:176]
+         b3bdae6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b3bdae70  b3bdb450  [stack:224]
+         b3bdae74  b3bdaf8c  [stack:224]
+         b3bdae78  42347c06  
+         b3bdae7c  474c33b2  
+         b3bdae80  00000000  
+         b3bdae84  00000000  
+         ........  ........
+    #06  b3bdaf90  00000000  
+         b3bdaf94  00000000  
+         b3bdaf98  00000000  
+         b3bdaf9c  00000000  
+         b3bdafa0  00000000  
+         b3bdafa4  00000000  
+         b3bdafa8  00000000  
+         b3bdafac  00000000  
+         b3bdafb0  00000000  
+         b3bdafb4  00000000  
+         b3bdafb8  00000000  
+         b3bdafbc  00000000  
+         b3bdafc0  00000000  
+         b3bdafc4  00000000  
+         b3bdafc8  00000000  
+         b3bdafcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 225, name: NHCanBusHandler
+    r0 00050e34  r1 00000080  r2 00000001  r3 00000000
+    r4 00000000  r5 00000001  r6 00000080  r7 000000f0
+    r8 b3bcb910  r9 00000001  sl 00050e34  fp 00050e30
+    ip b3bcad64  sp b3bcad78  lr b3bcb450  pc b6c631e8  cpsr 80010010
+
+backtrace:
+    #00  pc 0000c1e8  /lib/libpthread.so.0 (pthread_cond_wait+332)
+    #01  pc 00019873  /lib/libncore.so
+    #02  pc 00029889  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+116)
+    #03  pc 00019dfb  /lib/libncore.so
+    #04  pc 00019395  /lib/libncore.so
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b3bcad38  00000000  
+         b3bcad3c  00000000  
+         b3bcad40  00000000  
+         b3bcad44  00000000  
+         b3bcad48  00000000  
+         b3bcad4c  00000000  
+         b3bcad50  00000000  
+         b3bcad54  00000000  
+         b3bcad58  00000000  
+         b3bcad5c  00000000  
+         b3bcad60  00000000  
+         b3bcad64  00000000  
+         b3bcad68  00050d80  [heap]
+         b3bcad6c  00000000  
+         b3bcad70  00000001  
+         b3bcad74  b6c631cc  /lib/libpthread.so.0 (pthread_cond_wait+304)
+    #00  b3bcad78  00000000  
+         b3bcad7c  00000000  
+         b3bcad80  00050e10  [heap]
+         b3bcad84  b3bcad94  [stack:225]
+         b3bcad88  b3bcad98  [stack:225]
+         b3bcad8c  00000000  
+         b3bcad90  00050eb0  [heap]
+         b3bcad94  b6f00cf7  /lib/libncore.so (nutshell::NCAutoSync::~NCAutoSync()+10)
+         b3bcad98  b6c62ec4  /lib/libpthread.so.0
+         b3bcad9c  b3bcada8  [stack:225]
+         b3bcada0  00050ec8  [heap]
+         b3bcada4  00000000  
+         b3bcada8  00000000  
+         b3bcadac  00050e30  [heap]
+         b3bcadb0  00050e10  [heap]
+         b3bcadb4  00000000  
+         ........  ........
+    #01  b3bcade0  00050d80  [heap]
+         b3bcade4  ffffffff  
+         b3bcade8  00050d40  [heap]
+         b3bcadec  b3bcae04  [stack:225]
+         b3bcadf0  ffffffff  
+         b3bcadf4  00000000  
+         b3bcadf8  b684e4c0  [stack:176]
+         b3bcadfc  b695a88d  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+120)
+    #02  b3bcae00  00050d40  [heap]
+         b3bcae04  00000000  
+         b3bcae08  00000001  
+         b3bcae0c  00050d80  [heap]
+         b3bcae10  00050d86  [heap]
+         b3bcae14  000000e1  
+         b3bcae18  00000001  
+         b3bcae1c  b6f05dfd  /lib/libncore.so
+    #03  b3bcae20  00000001  
+         b3bcae24  0000086c  
+         b3bcae28  b6f05da5  /lib/libncore.so
+         b3bcae2c  00000000  
+         b3bcae30  00000000  
+         b3bcae34  00050dec  [heap]
+         b3bcae38  00000152  
+         b3bcae3c  b6f05397  /lib/libncore.so
+    #04  b3bcae40  b6f0538d  /lib/libncore.so
+         b3bcae44  b6c5e22c  /lib/libpthread.so.0
+    #05  b3bcae48  b3bcb668  [stack:225]
+         b3bcae4c  b3bcb450  [stack:225]
+         b3bcae50  00000000  
+         b3bcae54  00000000  
+         b3bcae58  b3bcb4b8  [stack:225]
+         b3bcae5c  00000000  
+         b3bcae60  00050dec  [heap]
+         b3bcae64  00000152  
+         b3bcae68  b684e4c0  [stack:176]
+         b3bcae6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b3bcae70  b3bcb450  [stack:225]
+         b3bcae74  b3bcaf8c  [stack:225]
+         b3bcae78  42357c06  
+         b3bcae7c  474c33b2  
+         b3bcae80  00000000  
+         b3bcae84  00000000  
+         ........  ........
+    #06  b3bcaf90  00000000  
+         b3bcaf94  00000000  
+         b3bcaf98  00000000  
+         b3bcaf9c  00000000  
+         b3bcafa0  00000000  
+         b3bcafa4  00000000  
+         b3bcafa8  00000000  
+         b3bcafac  00000000  
+         b3bcafb0  00000000  
+         b3bcafb4  00000000  
+         b3bcafb8  00000000  
+         b3bcafbc  00000000  
+         b3bcafc0  00000000  
+         b3bcafc4  00000000  
+         b3bcafc8  00000000  
+         b3bcafcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 226, name: NHCanBusHa_Work
+    r0 000510a4  r1 00000080  r2 0000000b  r3 00000000
+    r4 00000000  r5 0000000b  r6 00000080  r7 000000f0
+    r8 b3bbb910  r9 00000001  sl 000510a4  fp 000510a0
+    ip b3bbad64  sp b3bbad78  lr b3bbb450  pc b6c631e8  cpsr 800c0010
+
+backtrace:
+    #00  pc 0000c1e8  /lib/libpthread.so.0 (pthread_cond_wait+332)
+    #01  pc 00019873  /lib/libncore.so
+    #02  pc 00029889  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+116)
+    #03  pc 00019dfb  /lib/libncore.so
+    #04  pc 00019395  /lib/libncore.so
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b3bbad38  b3e931c0  
+         b3bbad3c  00000000  
+         b3bbad40  00000000  
+         b3bbad44  00000000  
+         b3bbad48  00000000  
+         b3bbad4c  00000000  
+         b3bbad50  00000001  
+         b3bbad54  b3e8bed0  
+         b3bbad58  b3bbadc4  [stack:226]
+         b3bbad5c  b3bbae04  [stack:226]
+         b3bbad60  b3bbaf8c  [stack:226]
+         b3bbad64  00000000  
+         b3bbad68  00050ff0  [heap]
+         b3bbad6c  00000000  
+         b3bbad70  0000000b  
+         b3bbad74  b6c631cc  /lib/libpthread.so.0 (pthread_cond_wait+304)
+    #00  b3bbad78  00000005  
+         b3bbad7c  00000000  
+         b3bbad80  00051080  [heap]
+         b3bbad84  b3bbad94  [stack:226]
+         b3bbad88  b3bbad98  [stack:226]
+         b3bbad8c  00000000  
+         b3bbad90  00051120  [heap]
+         b3bbad94  b6f00cf7  /lib/libncore.so (nutshell::NCAutoSync::~NCAutoSync()+10)
+         b3bbad98  b6c62ec4  /lib/libpthread.so.0
+         b3bbad9c  b3bbada8  [stack:226]
+         b3bbada0  00051138  [heap]
+         b3bbada4  00000000  
+         b3bbada8  00000000  
+         b3bbadac  000510a0  [heap]
+         b3bbadb0  00051080  [heap]
+         b3bbadb4  00000000  
+         ........  ........
+    #01  b3bbade0  00050ff0  [heap]
+         b3bbade4  ffffffff  
+         b3bbade8  00050fb0  [heap]
+         b3bbadec  b3bbae04  [stack:226]
+         b3bbadf0  ffffffff  
+         b3bbadf4  00000000  
+         b3bbadf8  b684e4c0  [stack:176]
+         b3bbadfc  b695a88d  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+120)
+    #02  b3bbae00  00050fb0  [heap]
+         b3bbae04  00000000  
+         b3bbae08  00000001  
+         b3bbae0c  00050ff0  [heap]
+         b3bbae10  00050ff6  [heap]
+         b3bbae14  000000e2  
+         b3bbae18  00000001  
+         b3bbae1c  b6f05dfd  /lib/libncore.so
+    #03  b3bbae20  00000001  
+         b3bbae24  00000884  
+         b3bbae28  b6f05da5  /lib/libncore.so
+         b3bbae2c  00000000  
+         b3bbae30  00000000  
+         b3bbae34  0005105c  [heap]
+         b3bbae38  00000152  
+         b3bbae3c  b6f05397  /lib/libncore.so
+    #04  b3bbae40  b6f0538d  /lib/libncore.so
+         b3bbae44  b6c5e22c  /lib/libpthread.so.0
+    #05  b3bbae48  b3bbb668  [stack:226]
+         b3bbae4c  b3bbb450  [stack:226]
+         b3bbae50  00000000  
+         b3bbae54  00000000  
+         b3bbae58  b3bbb4b8  [stack:226]
+         b3bbae5c  00000000  
+         b3bbae60  0005105c  [heap]
+         b3bbae64  00000152  
+         b3bbae68  b684e4c0  [stack:176]
+         b3bbae6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b3bbae70  b3bbb450  [stack:226]
+         b3bbae74  b3bbaf8c  [stack:226]
+         b3bbae78  42327c06  
+         b3bbae7c  474c33b2  
+         b3bbae80  00000000  
+         b3bbae84  00000000  
+         ........  ........
+    #06  b3bbaf90  00000000  
+         b3bbaf94  00000000  
+         b3bbaf98  00000000  
+         b3bbaf9c  00000000  
+         b3bbafa0  00000000  
+         b3bbafa4  00000000  
+         b3bbafa8  00000000  
+         b3bbafac  00000000  
+         b3bbafb0  00000000  
+         b3bbafb4  00000000  
+         b3bbafb8  00000000  
+         b3bbafbc  00000000  
+         b3bbafc0  00000000  
+         b3bbafc4  00000000  
+         b3bbafc8  00000000  
+         b3bbafcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 254, name: Binder_1
+    r0 00000019  r1 c0186201  r2 b3baadc8  r3 000495f0
+    r4 b4f00718  r5 b4f00748  r6 b4f006e8  r7 00000036
+    r8 00000001  r9 b4f00704  sl 00000000  fp b3baaf8c
+    ip b6b29d58  sp b3baadc4  lr b6b1644d  pc b6d53bf8  cpsr 60000010
+
+backtrace:
+    #00  pc 000cebf8  /lib/libc.so.6 (ioctl+8)
+    #01  pc 00019449  /lib/libbinder.so (android::IPCThreadState::talkWithDriver(bool)+136)
+    #02  pc 00019bb7  /lib/libbinder.so (android::IPCThreadState::joinThreadPool(bool)+146)
+    #03  pc 0001dacd  /lib/libbinder.so
+    #04  pc 0000f389  /lib/libutils.so (android::Thread::_threadLoop(void*)+112)
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b3baad84  00000004  
+         b3baad88  00000006  
+         b3baad8c  00000000  
+         b3baad90  00000000  
+         b3baad94  00000000  
+         b3baad98  00000000  
+         b3baad9c  00000000  
+         b3baada0  00010001  
+         b3baada4  00000000  
+         b3baada8  b4f00704  
+         b3baadac  00049b10  [heap]
+         b3baadb0  00049ac8  [heap]
+         b3baadb4  99999997  
+         b3baadb8  00000010  
+         b3baadbc  0000007e  
+         b3baadc0  00000000  
+    #00  b3baadc4  000495f0  [heap]
+    #01  b3baadc8  00000008  
+         b3baadcc  00000008  
+         b3baadd0  b4f120c0  
+         b3baadd4  00000100  
+         b3baadd8  00000000  
+         b3baaddc  b4f00790  
+         b3baade0  b4f006e8  
+         b3baade4  b4f00718  
+         b3baade8  00000008  
+         b3baadec  b4f00748  
+         b3baadf0  00000001  
+         b3baadf4  b6b16bbb  /lib/libbinder.so (android::IPCThreadState::joinThreadPool(bool)+150)
+    #02  b3baadf8  00069100  [heap]
+         b3baadfc  00000020  
+         b3baae00  00000001  
+         b3baae04  b3baae24  [stack:254]
+         b3baae08  0006910c  [heap]
+         b3baae0c  b6f51058  /lib/ld-linux-armhf.so.3
+         b3baae10  b3bab450  [stack:254]
+         b3baae14  b6b1aad1  /lib/libbinder.so
+    #03  b3baae18  00069100  [heap]
+         b3baae1c  b6aee38b  /lib/libutils.so (android::Thread::_threadLoop(void*)+114)
+    #04  b3baae20  00069100  [heap]
+         b3baae24  00000000  
+         b3baae28  00069100  [heap]
+         b3baae2c  00069180  [heap]
+         b3baae30  00000000  
+         b3baae34  00000000  
+         b3baae38  be8537a0  [stack]
+         b3baae3c  00000152  
+         b3baae40  b684e4c0  [stack:176]
+         b3baae44  b6c5e22c  /lib/libpthread.so.0
+    #05  b3baae48  b3bab668  [stack:254]
+         b3baae4c  b3bab450  [stack:254]
+         b3baae50  00000000  
+         b3baae54  00000000  
+         b3baae58  b3bab4b8  [stack:254]
+         b3baae5c  00000000  
+         b3baae60  be8537a0  [stack]
+         b3baae64  00000152  
+         b3baae68  b684e4c0  [stack:176]
+         b3baae6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b3baae70  b3bab450  [stack:254]
+         b3baae74  b3baaf8c  [stack:254]
+         b3baae78  42337c06  
+         b3baae7c  474c33b2  
+         b3baae80  00000000  
+         b3baae84  00000000  
+         ........  ........
+    #06  b3baaf90  00000000  
+         b3baaf94  00000000  
+         b3baaf98  00000000  
+         b3baaf9c  00000000  
+         b3baafa0  00000000  
+         b3baafa4  00000000  
+         b3baafa8  00000000  
+         b3baafac  00000000  
+         b3baafb0  00000000  
+         b3baafb4  00000000  
+         b3baafb8  00000000  
+         b3baafbc  00000000  
+         b3baafc0  00000000  
+         b3baafc4  00000000  
+         b3baafc8  00000000  
+         b3baafcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 256, name: NHCanBus_Record
+    r0 0004ab24  r1 00000080  r2 00000001  r3 00000000
+    r4 00000000  r5 00000001  r6 00000080  r7 000000f0
+    r8 b339b910  r9 00000001  sl 0004ab24  fp 0004ab20
+    ip b339ad64  sp b339ad78  lr b339b450  pc b6c631e8  cpsr 80010010
+
+backtrace:
+    #00  pc 0000c1e8  /lib/libpthread.so.0 (pthread_cond_wait+332)
+    #01  pc 00019873  /lib/libncore.so
+    #02  pc 00029889  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+116)
+    #03  pc 00019dfb  /lib/libncore.so
+    #04  pc 00019395  /lib/libncore.so
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b339ad38  00000000  
+         b339ad3c  00000000  
+         b339ad40  00000000  
+         b339ad44  00000000  
+         b339ad48  00000000  
+         b339ad4c  00000000  
+         b339ad50  00000000  
+         b339ad54  00000000  
+         b339ad58  00000000  
+         b339ad5c  00000000  
+         b339ad60  00000000  
+         b339ad64  00000000  
+         b339ad68  0004aa70  [heap]
+         b339ad6c  00000000  
+         b339ad70  00000001  
+         b339ad74  b6c631cc  /lib/libpthread.so.0 (pthread_cond_wait+304)
+    #00  b339ad78  00000000  
+         b339ad7c  00000000  
+         b339ad80  0004ab00  [heap]
+         b339ad84  b339ad94  [stack:256]
+         b339ad88  b339ad98  [stack:256]
+         b339ad8c  00000000  
+         b339ad90  0004aba8  [heap]
+         b339ad94  b6f00cf7  /lib/libncore.so (nutshell::NCAutoSync::~NCAutoSync()+10)
+         b339ad98  b6c62ec4  /lib/libpthread.so.0
+         b339ad9c  b339ada8  [stack:256]
+         b339ada0  0004abc0  [heap]
+         b339ada4  00000000  
+         b339ada8  00000000  
+         b339adac  0004ab20  [heap]
+         b339adb0  0004ab00  [heap]
+         b339adb4  00000000  
+         ........  ........
+    #01  b339ade0  0004aa70  [heap]
+         b339ade4  ffffffff  
+         b339ade8  b501c00c  /lib/libnhcanbushandler.so
+         b339adec  b339ae04  [stack:256]
+         b339adf0  ffffffff  
+         b339adf4  00000000  
+         b339adf8  b3bbb910  [stack:226]
+         b339adfc  b695a88d  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+120)
+    #02  b339ae00  b501c00c  /lib/libnhcanbushandler.so
+         b339ae04  00000000  
+         b339ae08  00000001  
+         b339ae0c  0004aa70  [heap]
+         b339ae10  0004aa76  [heap]
+         b339ae14  00000100  
+         b339ae18  00000001  
+         b339ae1c  b6f05dfd  /lib/libncore.so
+    #03  b339ae20  00000001  
+         b339ae24  00000885  
+         b339ae28  b6f05da5  /lib/libncore.so
+         b339ae2c  00000000  
+         b339ae30  00000000  
+         b339ae34  0004aadc  [heap]
+         b339ae38  00000152  
+         b339ae3c  b6f05397  /lib/libncore.so
+    #04  b339ae40  b6f0538d  /lib/libncore.so
+         b339ae44  b6c5e22c  /lib/libpthread.so.0
+    #05  b339ae48  b339b668  [stack:256]
+         b339ae4c  b339b450  [stack:256]
+         b339ae50  00000000  
+         b339ae54  00000000  
+         b339ae58  b339b4b8  [stack:256]
+         b339ae5c  00000000  
+         b339ae60  0004aadc  [heap]
+         b339ae64  00000152  
+         b339ae68  b3bbb910  [stack:226]
+         b339ae6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b339ae70  b339b450  [stack:256]
+         b339ae74  b339af8c  [stack:256]
+         b339ae78  42b07c06  
+         b339ae7c  474c33b2  
+         b339ae80  00000000  
+         b339ae84  00000000  
+         ........  ........
+    #06  b339af90  00000000  
+         b339af94  00000000  
+         b339af98  00000000  
+         b339af9c  00000000  
+         b339afa0  00000000  
+         b339afa4  00000000  
+         b339afa8  00000000  
+         b339afac  00000000  
+         b339afb0  00000000  
+         b339afb4  00000000  
+         b339afb8  00000000  
+         b339afbc  00000000  
+         b339afc0  00000000  
+         b339afc4  00000000  
+         b339afc8  00000000  
+         b339afcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 257, name: NHCanBus_Parse
+    r0 00052b84  r1 00000080  r2 00000001  r3 00000000
+    r4 00000000  r5 00000001  r6 00000080  r7 000000f0
+    r8 b338b910  r9 00000001  sl 00052b84  fp 00052b80
+    ip b338ad64  sp b338ad78  lr b338b450  pc b6c631e8  cpsr 80000010
+
+backtrace:
+    #00  pc 0000c1e8  /lib/libpthread.so.0 (pthread_cond_wait+332)
+    #01  pc 00019873  /lib/libncore.so
+    #02  pc 00029889  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+116)
+    #03  pc 00019dfb  /lib/libncore.so
+    #04  pc 00019395  /lib/libncore.so
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b338ad38  00000000  
+         b338ad3c  00000000  
+         b338ad40  00000000  
+         b338ad44  00000000  
+         b338ad48  00000000  
+         b338ad4c  00000000  
+         b338ad50  00000000  
+         b338ad54  00000000  
+         b338ad58  00000000  
+         b338ad5c  00000000  
+         b338ad60  00000000  
+         b338ad64  00000000  
+         b338ad68  00052ad0  [heap]
+         b338ad6c  00000000  
+         b338ad70  00000001  
+         b338ad74  b6c631cc  /lib/libpthread.so.0 (pthread_cond_wait+304)
+    #00  b338ad78  00000000  
+         b338ad7c  00000000  
+         b338ad80  00052b60  [heap]
+         b338ad84  b338ad94  [stack:257]
+         b338ad88  b338ad98  [stack:257]
+         b338ad8c  00000000  
+         b338ad90  00052c00  [heap]
+         b338ad94  b6f00cf7  /lib/libncore.so (nutshell::NCAutoSync::~NCAutoSync()+10)
+         b338ad98  b6c62ec4  /lib/libpthread.so.0
+         b338ad9c  b338ada8  [stack:257]
+         b338ada0  00052c18  [heap]
+         b338ada4  00000000  
+         b338ada8  00000000  
+         b338adac  00052b80  [heap]
+         b338adb0  00052b60  [heap]
+         b338adb4  00000000  
+         ........  ........
+    #01  b338ade0  00052ad0  [heap]
+         b338ade4  ffffffff  
+         b338ade8  00052978  [heap]
+         b338adec  b338ae04  [stack:257]
+         b338adf0  ffffffff  
+         b338adf4  00000000  
+         b338adf8  b3bbb910  [stack:226]
+         b338adfc  b695a88d  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+120)
+    #02  b338ae00  00052978  [heap]
+         b338ae04  00000000  
+         b338ae08  00000001  
+         b338ae0c  00052ad0  [heap]
+         b338ae10  00052ad6  [heap]
+         b338ae14  00000101  
+         b338ae18  00000001  
+         b338ae1c  b6f05dfd  /lib/libncore.so
+    #03  b338ae20  00000001  
+         b338ae24  00000898  
+         b338ae28  b6f05da5  /lib/libncore.so
+         b338ae2c  00000000  
+         b338ae30  00000000  
+         b338ae34  00052b3c  [heap]
+         b338ae38  00000152  
+         b338ae3c  b6f05397  /lib/libncore.so
+    #04  b338ae40  b6f0538d  /lib/libncore.so
+         b338ae44  b6c5e22c  /lib/libpthread.so.0
+    #05  b338ae48  b338b668  [stack:257]
+         b338ae4c  b338b450  [stack:257]
+         b338ae50  00000000  
+         b338ae54  00000000  
+         b338ae58  b338b4b8  [stack:257]
+         b338ae5c  00000000  
+         b338ae60  00052b3c  [heap]
+         b338ae64  00000152  
+         b338ae68  b3bbb910  [stack:226]
+         b338ae6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b338ae70  b338b450  [stack:257]
+         b338ae74  b338af8c  [stack:257]
+         b338ae78  42b17c06  
+         b338ae7c  474c33b2  
+         b338ae80  00000000  
+         b338ae84  00000000  
+         ........  ........
+    #06  b338af90  00000000  
+         b338af94  00000000  
+         b338af98  00000000  
+         b338af9c  00000000  
+         b338afa0  00000000  
+         b338afa4  00000000  
+         b338afa8  00000000  
+         b338afac  00000000  
+         b338afb0  00000000  
+         b338afb4  00000000  
+         b338afb8  00000000  
+         b338afbc  00000000  
+         b338afc0  00000000  
+         b338afc4  00000000  
+         b338afc8  00000000  
+         b338afcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 258, name: NHCanBus_Rcv
+    r0 b337a14c  r1 00000080  r2 00000001  r3 b337a0d8
+    r4 00000001  r5 b337b910  r6 b337a148  r7 000000f0
+    r8 b337a0d8  r9 00000000  sl 00000080  fp b337a198
+    ip b337a0a4  sp b337a0b8  lr b337b450  pc b6c63560  cpsr 80000010
+
+backtrace:
+    #00  pc 0000c560  /lib/libpthread.so.0 (pthread_cond_timedwait+412)
+    #01  pc 00019801  /lib/libncore.so
+    #02  pc 0001999d  /lib/libncore.so
+    #03  pc 00007e19  /lib/libnhcanbushandler.so
+    #04  pc 00007e99  /lib/libnhcanbushandler.so
+    #05  pc 00019dfb  /lib/libncore.so
+    #06  pc 00019395  /lib/libncore.so
+    #07  pc 00007228  /lib/libpthread.so.0
+    #08  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b337a078  00000000  
+         b337a07c  00000000  
+         b337a080  00000000  
+         b337a084  00000000  
+         b337a088  00000000  
+         b337a08c  00000000  
+         b337a090  00000000  
+         b337a094  00000000  
+         b337a098  00000000  
+         b337a09c  00000000  
+         b337a0a0  00000000  
+         b337a0a4  00000000  
+         b337a0a8  b337a130  [stack:258]
+         b337a0ac  00000001  
+         b337a0b0  b337b910  [stack:258]
+         b337a0b4  b6c63544  /lib/libpthread.so.0 (pthread_cond_timedwait+384)
+    #00  b337a0b8  00000000  
+         b337a0bc  00000000  
+         b337a0c0  b337a14c  [stack:258]
+         b337a0c4  b337a130  [stack:258]
+         b337a0c8  b337a0e0  [stack:258]
+         b337a0cc  00000000  
+         b337a0d0  00000000  
+         b337a0d4  00000000  
+         b337a0d8  00000000  
+         b337a0dc  013114c8  
+         b337a0e0  b6c62ec4  /lib/libpthread.so.0
+         b337a0e4  b337a0f0  [stack:258]
+         b337a0e8  00000000  
+         b337a0ec  00000000  
+         b337a0f0  00000000  
+         b337a0f4  b337a148  [stack:258]
+         ........  ........
+    #01  b337a128  00000000  
+         b337a12c  00000002  
+         b337a130  00000000  
+         b337a134  00000000  
+         b337a138  00000000  
+         b337a13c  00000000  
+         b337a140  00000001  
+         b337a144  00000000  
+         b337a148  00000000  
+         b337a14c  00000001  
+         b337a150  00000001  
+         b337a154  00000000  
+         b337a158  00000000  
+         b337a15c  00000000  
+         b337a160  00000000  
+         b337a164  00000000  
+         ........  ........
+    #02  b337a198  00000a48  
+         b337a19c  224ccb34  
+         b337a1a0  00052c68  [heap]
+         b337a1a4  b6f05275  /lib/libncore.so (nutshell::NCThread::msleep(unsigned long))
+         b337a1a8  b337a1c4  [stack:258]
+         b337a1ac  b500fe1b  /lib/libnhcanbushandler.so
+    #03  b337a1b0  00000000  
+         b337a1b4  00000000  
+         b337a1b8  00000000  
+         b337a1bc  b6f50f10  /lib/ld-linux-armhf.so.3
+         b337a1c0  00000000  
+         b337a1c4  00000000  
+         b337a1c8  00000000  
+         b337a1cc  00000000  
+         b337a1d0  00000000  
+         b337a1d4  00000000  
+         b337a1d8  00000000  
+         b337a1dc  00000000  
+         b337a1e0  00000000  
+         b337a1e4  00000000  
+         b337a1e8  00000000  
+         b337a1ec  00000000  
+         ........  ........
+    #04  b337ae18  00053080  [heap]
+         b337ae1c  b6f05dfd  /lib/libncore.so
+    #05  b337ae20  00000001  
+         b337ae24  00000897  
+         b337ae28  b6f05da5  /lib/libncore.so
+         b337ae2c  00000000  
+         b337ae30  00000000  
+         b337ae34  000530ec  [heap]
+         b337ae38  00000152  
+         b337ae3c  b6f05397  /lib/libncore.so
+    #06  b337ae40  b6f0538d  /lib/libncore.so
+         b337ae44  b6c5e22c  /lib/libpthread.so.0
+    #07  b337ae48  b337b668  [stack:258]
+         b337ae4c  b337b450  [stack:258]
+         b337ae50  00000000  
+         b337ae54  00000000  
+         b337ae58  b337b4b8  [stack:258]
+         b337ae5c  00000000  
+         b337ae60  000530ec  [heap]
+         b337ae64  00000152  
+         b337ae68  b3bbb910  [stack:226]
+         b337ae6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b337ae70  b337b450  [stack:258]
+         b337ae74  b337af8c  [stack:258]
+         b337ae78  42be7c06  
+         b337ae7c  474c33b2  
+         b337ae80  00000000  
+         b337ae84  00000000  
+         ........  ........
+    #08  b337af90  00000000  
+         b337af94  00000000  
+         b337af98  00000000  
+         b337af9c  00000000  
+         b337afa0  00000000  
+         b337afa4  00000000  
+         b337afa8  00000000  
+         b337afac  00000000  
+         b337afb0  00000000  
+         b337afb4  00000000  
+         b337afb8  00000000  
+         b337afbc  00000000  
+         b337afc0  00000000  
+         b337afc4  00000000  
+         b337afc8  00000000  
+         b337afcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 259, name: NHCanBus_Send
+    r0 000533a4  r1 00000080  r2 00000001  r3 00000000
+    r4 00000000  r5 00000001  r6 00000080  r7 000000f0
+    r8 b336b910  r9 00000001  sl 000533a4  fp 000533a0
+    ip b336ad64  sp b336ad78  lr b336b450  pc b6c631e8  cpsr 80000010
+
+backtrace:
+    #00  pc 0000c1e8  /lib/libpthread.so.0 (pthread_cond_wait+332)
+    #01  pc 00019873  /lib/libncore.so
+    #02  pc 00029889  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+116)
+    #03  pc 00019dfb  /lib/libncore.so
+    #04  pc 00019395  /lib/libncore.so
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b336ad38  00000000  
+         b336ad3c  00000000  
+         b336ad40  00000000  
+         b336ad44  00000000  
+         b336ad48  00000000  
+         b336ad4c  00000000  
+         b336ad50  00000000  
+         b336ad54  00000000  
+         b336ad58  00000000  
+         b336ad5c  00000000  
+         b336ad60  00000000  
+         b336ad64  00000000  
+         b336ad68  000532f0  [heap]
+         b336ad6c  00000000  
+         b336ad70  00000001  
+         b336ad74  b6c631cc  /lib/libpthread.so.0 (pthread_cond_wait+304)
+    #00  b336ad78  00000000  
+         b336ad7c  00000000  
+         b336ad80  00053380  [heap]
+         b336ad84  b336ad94  [stack:259]
+         b336ad88  b336ad98  [stack:259]
+         b336ad8c  00000000  
+         b336ad90  00053438  [heap]
+         b336ad94  b6f00cf7  /lib/libncore.so (nutshell::NCAutoSync::~NCAutoSync()+10)
+         b336ad98  b6c62ec4  /lib/libpthread.so.0
+         b336ad9c  b336ada8  [stack:259]
+         b336ada0  00053450  [heap]
+         b336ada4  00000000  
+         b336ada8  00000000  
+         b336adac  000533a0  [heap]
+         b336adb0  00053380  [heap]
+         b336adb4  00000000  
+         ........  ........
+    #01  b336ade0  000532f0  [heap]
+         b336ade4  ffffffff  
+         b336ade8  000531a0  [heap]
+         b336adec  b336ae04  [stack:259]
+         b336adf0  ffffffff  
+         b336adf4  00000000  
+         b336adf8  b3bbb910  [stack:226]
+         b336adfc  b695a88d  /lib/libnceventsys.so (nutshell::NCRunnableThread::run()+120)
+    #02  b336ae00  000531a0  [heap]
+         b336ae04  00000000  
+         b336ae08  00000001  
+         b336ae0c  000532f0  [heap]
+         b336ae10  000532f6  [heap]
+         b336ae14  00000103  
+         b336ae18  00000001  
+         b336ae1c  b6f05dfd  /lib/libncore.so
+    #03  b336ae20  00000001  
+         b336ae24  00000885  
+         b336ae28  b6f05da5  /lib/libncore.so
+         b336ae2c  00000000  
+         b336ae30  00000000  
+         b336ae34  0005335c  [heap]
+         b336ae38  00000152  
+         b336ae3c  b6f05397  /lib/libncore.so
+    #04  b336ae40  b6f0538d  /lib/libncore.so
+         b336ae44  b6c5e22c  /lib/libpthread.so.0
+    #05  b336ae48  b336b668  [stack:259]
+         b336ae4c  b336b450  [stack:259]
+         b336ae50  00000000  
+         b336ae54  00000000  
+         b336ae58  b336b4b8  [stack:259]
+         b336ae5c  00000000  
+         b336ae60  0005335c  [heap]
+         b336ae64  00000152  
+         b336ae68  b3bbb910  [stack:226]
+         b336ae6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b336ae70  b336b450  [stack:259]
+         b336ae74  b336af8c  [stack:259]
+         b336ae78  42bf7c06  
+         b336ae7c  474c33b2  
+         b336ae80  00000000  
+         b336ae84  00000000  
+         ........  ........
+    #06  b336af90  00000000  
+         b336af94  00000000  
+         b336af98  00000000  
+         b336af9c  00000000  
+         b336afa0  00000000  
+         b336afa4  00000000  
+         b336afa8  00000000  
+         b336afac  00000000  
+         b336afb0  00000000  
+         b336afb4  00000000  
+         b336afb8  00000000  
+         b336afbc  00000000  
+         b336afc0  00000000  
+         b336afc4  00000000  
+         b336afc8  00000000  
+         b336afcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 270, name: diaglibEvent
+    r0 b3e32a24  r1 00000080  r2 000004d1  r3 00000000
+    r4 00000000  r5 000004d1  r6 00000080  r7 000000f0
+    r8 b32c2910  r9 00000001  sl b3e32a24  fp b3e32a20
+    ip b32c1d74  sp b32c1d88  lr b32c2450  pc b6c631e8  cpsr 800f0010
+
+backtrace:
+    #00  pc 0000c1e8  /lib/libpthread.so.0 (pthread_cond_wait+332)
+    #01  pc 00019873  /lib/libncore.so
+    #02  pc 000030fd  /lib/libnhdiag.so
+    #03  pc 00019dfb  /lib/libncore.so
+    #04  pc 00019395  /lib/libncore.so
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b32c1d48  b6f20eb0  /lib/libncore.so
+         b32c1d4c  00000000  
+         b32c1d50  00000020  
+         b32c1d54  00000000  
+         b32c1d58  b6f20eb0  /lib/libncore.so
+         b32c1d5c  00000000  
+         b32c1d60  b6f221a8  /lib/libncore.so
+         b32c1d64  00000015  
+         b32c1d68  b32cc957  /lib/libnhdiag.so
+         b32c1d6c  b32cc9db  /lib/libnhdiag.so
+         b32c1d70  b32c2450  [stack:270]
+         b32c1d74  00000000  
+         b32c1d78  b3e32970  
+         b32c1d7c  00000000  
+         b32c1d80  000004d1  
+         b32c1d84  b6c631cc  /lib/libpthread.so.0 (pthread_cond_wait+304)
+    #00  b32c1d88  00000268  
+         b32c1d8c  00000000  
+         b32c1d90  b3e32a00  
+         b32c1d94  b32c1da4  [stack:270]
+         b32c1d98  b32c1da8  [stack:270]
+         b32c1d9c  00000000  
+         b32c1da0  00000015  
+         b32c1da4  0000033e  
+         b32c1da8  b6c62ec4  /lib/libpthread.so.0
+         b32c1dac  b32c1db8  [stack:270]
+         b32c1db0  b3e27468  
+         b32c1db4  00000000  
+         b32c1db8  00000000  
+         b32c1dbc  b3e32a20  
+         b32c1dc0  b3e32a00  
+         b32c1dc4  00000000  
+         ........  ........
+    #01  b32c1df0  b3e32970  
+         b32c1df4  ffffffff  
+         b32c1df8  b3e327d8  
+         b32c1dfc  00000000  
+         b32c1e00  0000010e  
+         b32c1e04  00000005  
+         b32c1e08  b3bbb910  [stack:226]
+         b32c1e0c  b32c60ff  /lib/libnhdiag.so
+    #02  b32c1e10  b32daaf0  /lib/libnhdiag.so
+         b32c1e14  b3e32970  
+         b32c1e18  b3e32976  
+         b32c1e1c  b6f05dfd  /lib/libncore.so
+    #03  b32c1e20  00000005  
+         b32c1e24  0000089a  
+         b32c1e28  b6f05da5  /lib/libncore.so
+         b32c1e2c  00000000  
+         b32c1e30  00000000  
+         b32c1e34  b3e329dc  
+         b32c1e38  00000152  
+         b32c1e3c  b6f05397  /lib/libncore.so
+    #04  b32c1e40  b6f0538d  /lib/libncore.so
+         b32c1e44  b6c5e22c  /lib/libpthread.so.0
+    #05  b32c1e48  b32c2668  [stack:270]
+         b32c1e4c  b32c2450  [stack:270]
+         b32c1e50  00000000  
+         b32c1e54  00000000  
+         b32c1e58  b32c24b8  [stack:270]
+         b32c1e5c  00000000  
+         b32c1e60  b3e329dc  
+         b32c1e64  00000152  
+         b32c1e68  b3bbb910  [stack:226]
+         b32c1e6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b32c1e70  b32c2450  [stack:270]
+         b32c1e74  b32c1f8c  [stack:270]
+         b32c1e78  42a5cc06  
+         b32c1e7c  474c33b2  
+         b32c1e80  00000000  
+         b32c1e84  00000000  
+         ........  ........
+    #06  b32c1f90  00000000  
+         b32c1f94  00000000  
+         b32c1f98  00000000  
+         b32c1f9c  00000000  
+         b32c1fa0  00000000  
+         b32c1fa4  00000000  
+         b32c1fa8  00000000  
+         b32c1fac  00000000  
+         b32c1fb0  00000000  
+         b32c1fb4  00000000  
+         b32c1fb8  00000000  
+         b32c1fbc  00000000  
+         b32c1fc0  00000000  
+         b32c1fc4  00000000  
+         b32c1fc8  00000000  
+         b32c1fcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 285, name: NCTimerManager
+    r0 b6f22204  r1 00000080  r2 0000060d  r3 b32b1da8
+    r4 0000060d  r5 b32b2910  r6 b6f22200  r7 000000f0
+    r8 b32b1da8  r9 00000000  sl 00000080  fp b32b1e08
+    ip b32b1d74  sp b32b1d88  lr b32b2450  pc b6c63560  cpsr 80030010
+
+backtrace:
+    #00  pc 0000c560  /lib/libpthread.so.0 (pthread_cond_timedwait+412)
+    #01  pc 0001a84b  /lib/libncore.so
+    #02  pc 0001a1c9  /lib/libncore.so
+    #03  pc 00007228  /lib/libpthread.so.0
+    #04  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b32b1d48  00000000  
+         b32b1d4c  b6dc6000  /lib/libc.so.6
+         b32b1d50  00000000  
+         b32b1d54  b3d00010  
+         b32b1d58  0000000c  
+         b32b1d5c  b32b2910  [stack:285]
+         b32b1d60  b3e1bac0  
+         b32b1d64  b32b1dd4  [stack:285]
+         b32b1d68  b32b1e08  [stack:285]
+         b32b1d6c  00000001  
+         b32b1d70  b32b1f8c  [stack:285]
+         b32b1d74  00000000  
+         b32b1d78  b6f22088  /lib/libncore.so
+         b32b1d7c  0000060d  
+         b32b1d80  b32b2910  [stack:285]
+         b32b1d84  b6c63544  /lib/libpthread.so.0 (pthread_cond_timedwait+384)
+    #00  b32b1d88  00000306  
+         b32b1d8c  00000000  
+         b32b1d90  b6f22204  /lib/libncore.so
+         b32b1d94  b6f221e0  /lib/libncore.so
+         b32b1d98  b32b1db0  [stack:285]
+         b32b1d9c  00000000  
+         b32b1da0  b32b1e10  [stack:285]
+         b32b1da4  b6f221a8  /lib/libncore.so
+         b32b1da8  00000001  
+         b32b1dac  3b9ac618  
+         b32b1db0  b6c62ec4  /lib/libpthread.so.0
+         b32b1db4  b32b1dc0  [stack:285]
+         b32b1db8  b6f22088  /lib/libncore.so
+         b32b1dbc  00000000  
+         b32b1dc0  00000000  
+         b32b1dc4  b6f22200  /lib/libncore.so
+         ........  ........
+    #01  b32b1df8  00000000  
+         b32b1dfc  00000000  
+         b32b1e00  00000000  
+         b32b1e04  00000000  
+         b32b1e08  00000a48  
+         b32b1e0c  242ea580  
+         b32b1e10  00000a46  
+         b32b1e14  242e9bbc  
+         b32b1e18  00000000  
+         b32b1e1c  00000000  
+         b32b1e20  00000000  
+         b32b1e24  00000000  
+         b32b1e28  b6f221bc  /lib/libncore.so
+         b32b1e2c  00000152  
+         b32b1e30  b32c2910  [stack:270]
+         b32b1e34  b6f51058  /lib/ld-linux-armhf.so.3
+         ........  ........
+    #02  b32b1e40  b6f061c1  /lib/libncore.so
+         b32b1e44  b6c5e22c  /lib/libpthread.so.0
+    #03  b32b1e48  b32b2668  [stack:285]
+         b32b1e4c  b32b2450  [stack:285]
+         b32b1e50  00000000  
+         b32b1e54  00000000  
+         b32b1e58  b32b24b8  [stack:285]
+         b32b1e5c  00000000  
+         b32b1e60  b6f221bc  /lib/libncore.so
+         b32b1e64  00000152  
+         b32b1e68  b32c2910  [stack:270]
+         b32b1e6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b32b1e70  b32b2450  [stack:285]
+         b32b1e74  b32b1f8c  [stack:285]
+         b32b1e78  42a2cc06  
+         b32b1e7c  474c33b2  
+         b32b1e80  00000000  
+         b32b1e84  00000000  
+         ........  ........
+    #04  b32b1f90  00000000  
+         b32b1f94  00000000  
+         b32b1f98  00000000  
+         b32b1f9c  00000000  
+         b32b1fa0  00000000  
+         b32b1fa4  00000000  
+         b32b1fa8  00000000  
+         b32b1fac  00000000  
+         b32b1fb0  00000000  
+         b32b1fb4  00000000  
+         b32b1fb8  00000000  
+         b32b1fbc  00000000  
+         b32b1fc0  00000000  
+         b32b1fc4  00000000  
+         b32b1fc8  00000000  
+         b32b1fcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 287, name: Binder_2
+    r0 00000019  r1 c0186201  r2 b32a1dc8  r3 00000100
+    r4 b4f122c0  r5 b4f122f0  r6 b4f12290  r7 00000036
+    r8 00000001  r9 b4f122ac  sl 00000000  fp b32a1f8c
+    ip b6b29d58  sp b32a1dc4  lr b6b1644d  pc b6d53bf8  cpsr 60000010
+
+backtrace:
+    #00  pc 000cebf8  /lib/libc.so.6 (ioctl+8)
+    #01  pc 00019449  /lib/libbinder.so (android::IPCThreadState::talkWithDriver(bool)+136)
+    #02  pc 00019bb7  /lib/libbinder.so (android::IPCThreadState::joinThreadPool(bool)+146)
+    #03  pc 0001dacd  /lib/libbinder.so
+    #04  pc 0000f389  /lib/libutils.so (android::Thread::_threadLoop(void*)+112)
+    #05  pc 00007228  /lib/libpthread.so.0
+    #06  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b32a1d84  b6cfc7d4  /lib/libc.so.6 (malloc+136)
+         b32a1d88  0000005b  
+         b32a1d8c  00000000  
+         b32a1d90  00000077  
+         b32a1d94  b4f122c0  
+         b32a1d98  00000004  
+         b32a1d9c  00000004  
+         b32a1da0  000495f0  [heap]
+         b32a1da4  00000001  
+         b32a1da8  b4f122ac  
+         b32a1dac  00000000  
+         b32a1db0  b32a1f8c  [stack:287]
+         b32a1db4  b6b1980f  /lib/libbinder.so (android::Parcel::setDataSize(unsigned int)+10)
+         b32a1db8  00000004  
+         b32a1dbc  b4f122c0  
+         b32a1dc0  b4f122f0  
+    #00  b32a1dc4  000495f0  [heap]
+    #01  b32a1dc8  00000000  
+         b32a1dcc  00000000  
+         b32a1dd0  b4f12440  
+         b32a1dd4  00000100  
+         b32a1dd8  00000000  
+         b32a1ddc  b4f12338  
+         b32a1de0  b4f12290  
+         b32a1de4  b4f122c0  
+         b32a1de8  00000004  
+         b32a1dec  b4f122f0  
+         b32a1df0  00000000  
+         b32a1df4  b6b16bbb  /lib/libbinder.so (android::IPCThreadState::joinThreadPool(bool)+150)
+    #02  b32a1df8  b4f00a98  
+         b32a1dfc  00000020  
+         b32a1e00  00000001  
+         b32a1e04  b32a1e24  [stack:287]
+         b32a1e08  b4f00aa4  
+         b32a1e0c  b6f51058  /lib/ld-linux-armhf.so.3
+         b32a1e10  b32a2450  [stack:287]
+         b32a1e14  b6b1aad1  /lib/libbinder.so
+    #03  b32a1e18  b4f00a98  
+         b32a1e1c  b6aee38b  /lib/libutils.so (android::Thread::_threadLoop(void*)+114)
+    #04  b32a1e20  b4f00a98  
+         b32a1e24  00000000  
+         b32a1e28  b4f00a98  
+         b32a1e2c  b4f121c8  
+         b32a1e30  00000000  
+         b32a1e34  00000000  
+         b32a1e38  b3baac88  [stack:254]
+         b32a1e3c  00000152  
+         b32a1e40  b3bab910  [stack:254]
+         b32a1e44  b6c5e22c  /lib/libpthread.so.0
+    #05  b32a1e48  b32a2668  [stack:287]
+         b32a1e4c  b32a2450  [stack:287]
+         b32a1e50  00000000  
+         b32a1e54  00000000  
+         b32a1e58  b32a24b8  [stack:287]
+         b32a1e5c  00000000  
+         b32a1e60  b3baac88  [stack:254]
+         b32a1e64  00000152  
+         b32a1e68  b3bab910  [stack:254]
+         b32a1e6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b32a1e70  b32a2450  [stack:287]
+         b32a1e74  b32a1f8c  [stack:287]
+         b32a1e78  42a3cc06  
+         b32a1e7c  474c33b2  
+         b32a1e80  00000000  
+         b32a1e84  00000000  
+         ........  ........
+    #06  b32a1f90  00000000  
+         b32a1f94  00000000  
+         b32a1f98  00000000  
+         b32a1f9c  00000000  
+         b32a1fa0  00000000  
+         b32a1fa4  00000000  
+         b32a1fa8  00000000  
+         b32a1fac  00000000  
+         b32a1fb0  00000000  
+         b32a1fb4  00000000  
+         b32a1fb8  00000000  
+         b32a1fbc  00000000  
+         b32a1fc0  00000000  
+         b32a1fc4  00000000  
+         b32a1fc8  00000000  
+         b32a1fcc  00000000  
+--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+pid: 130, tid: 1169, name: diaglibSocket
+    r0 00000031  r1 b2aa1cf4  r2 00000100  r3 00004000
+    r4 b3e32a90  r5 b2aa2450  r6 b2aa1cf4  r7 00000123
+    r8 b32d0312  r9 b32cc957  sl b32cf399  fp b32cf399
+    ip 00000000  sp b2aa1ca0  lr b2aa2450  pc b6d5d820  cpsr 80030010
+
+backtrace:
+    #00  pc 000d8820  /lib/libc.so.6 (recv+64)
+    #01  pc 0000756d  /lib/libnhdiag.so
+    #02  pc 00019dfb  /lib/libncore.so
+    #03  pc 00019395  /lib/libncore.so
+    #04  pc 00007228  /lib/libpthread.so.0
+    #05  pc 000d785c  /lib/libc.so.6
+
+stack:
+         b2aa1c60  00000000  
+         b2aa1c64  00000000  
+         b2aa1c68  00000000  
+         b2aa1c6c  00000000  
+         b2aa1c70  00000000  
+         b2aa1c74  00000000  
+         b2aa1c78  00000000  
+         b2aa1c7c  00000000  
+         b2aa1c80  b6dc59b8  /lib/libc.so.6
+         b2aa1c84  b3e32a90  
+         b2aa1c88  b2aa2450  [stack:1169]
+         b2aa1c8c  b6d5d814  /lib/libc.so.6 (recv+52)
+         b2aa1c90  00000031  
+         b2aa1c94  b2aa1cf4  [stack:1169]
+         b2aa1c98  00000100  
+         b2aa1c9c  00004000  
+    #00  b2aa1ca0  b32ca571  /lib/libnhdiag.so
+         b2aa1ca4  00000060  
+    #01  b2aa1ca8  00000491  
+         b2aa1cac  b2aa2450  [stack:1169]
+         b2aa1cb0  002818a0  
+         b2aa1cb4  0000004e  
+         b2aa1cb8  b32cf399  /lib/libnhdiag.so
+         b2aa1cbc  0000006b  
+         b2aa1cc0  00000060  
+         b2aa1cc4  00000031  
+         b2aa1cc8  00000000  
+         b2aa1ccc  57554100  
+         b2aa1cd0  b2aa1cf4  [stack:1169]
+         b2aa1cd4  00000491  
+         b2aa1cd8  00000082  
+         b2aa1cdc  002818a0  
+         b2aa1ce0  b6f1484e  /lib/libncore.so
+         b2aa1ce4  b6f50f10  /lib/ld-linux-armhf.so.3
+         ........  ........
+    #02  b2aa1e20  00000005  
+         b2aa1e24  0000e39f  
+         b2aa1e28  b6f05da5  /lib/libncore.so
+         b2aa1e2c  00000000  
+         b2aa1e30  00000000  
+         b2aa1e34  b3e32c24  
+         b2aa1e38  00000152  
+         b2aa1e3c  b6f05397  /lib/libncore.so
+    #03  b2aa1e40  b6f0538d  /lib/libncore.so
+         b2aa1e44  b6c5e22c  /lib/libpthread.so.0
+    #04  b2aa1e48  b2aa2668  [stack:1169]
+         b2aa1e4c  b2aa2450  [stack:1169]
+         b2aa1e50  00000000  
+         b2aa1e54  00000000  
+         b2aa1e58  b2aa24b8  [stack:1169]
+         b2aa1e5c  00000000  
+         b2aa1e60  b3e32c24  
+         b2aa1e64  00000152  
+         b2aa1e68  b32c2910  [stack:270]
+         b2aa1e6c  b6f51058  /lib/ld-linux-armhf.so.3
+         b2aa1e70  b2aa2450  [stack:1169]
+         b2aa1e74  b2aa1f8c  [stack:1169]
+         b2aa1e78  4323cc06  
+         b2aa1e7c  474c33b2  
+         b2aa1e80  00000000  
+         b2aa1e84  00000000  
+         ........  ........
+    #05  b2aa1f90  00000000  
+         b2aa1f94  00000000  
+         b2aa1f98  00000000  
+         b2aa1f9c  00000000  
+         b2aa1fa0  00000000  
+         b2aa1fa4  00000000  
+         b2aa1fa8  00000000  
+         b2aa1fac  00000000  
+         b2aa1fb0  00000000  
+         b2aa1fb4  00000000  
+         b2aa1fb8  00000000  
+         b2aa1fbc  00000000  
+         b2aa1fc0  00000000  
+         b2aa1fc4  00000000  
+         b2aa1fc8  00000000  
+         b2aa1fcc  00000000  
+--------- log /dev/log/main
+04-19 14:07:49.420   130   255 I DEBUG   : debugger_signal_handler
+04-19 14:07:49.420   130   255 I DEBUG   : pid = 130
+04-19 14:07:49.420   130   255 I DEBUG   : tid = 255
+04-19 14:07:49.420   130   255 I DEBUG   : name = NHCanBus_DataCh
+04-19 14:07:49.420   130   255 I DEBUG   : sig num is 11
+
